@@ -278,6 +278,13 @@ html.is-clipped--nav {
   color: black;
 }
 
-.version-option:hover{
+.version-option:hover {
   background-color: #e2e2e2;
+}
+
+/*
+  hidden by default.
+*/
+.button.versions.hidden {
+  display: none;
 }

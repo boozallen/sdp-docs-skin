@@ -7,7 +7,7 @@
           {{this.title}}
         </a>
 
-        <button id="versions-button-{{this.name}}" data-template="{{this.name}}" class="button versions">
+        <button id="versions-button-{{this.name}}" component="{{this.name}}" data-template="{{this.name}}" class="button versions hidden">
           {{this.latestVersion.version}}
         </button>
       </h3>
@@ -25,8 +25,13 @@
           {{/each}}
         </div>     
       </div>
-     
-{{> nav-tree navigation=this.latestVersion.navigation}}
+    
+      {{#each this.versions}}
+        <div id='nav-{{../name}}-{{./version}}' style='display: none;'>
+          {{> nav-tree navigation=./navigation}}
+        </div>
+      {{/each}}
+
     {{/each}}
   </nav>
 </div>
