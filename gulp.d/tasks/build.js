@@ -69,6 +69,15 @@ module.exports = (src, dest, preview) => () => {
       )
       .pipe(buffer())
       .pipe(uglify()),
+    vfs
+      .src([require.resolve('popper.js/dist/umd/popper.min.js'), require.resolve('tippy.js/umd/index.min.js')], opts)
+      .pipe(
+        map((file, enc, next) => {
+          file.contents = Buffer.from(file.contents.toString().replace(/\n\/\/# sourceMappingURL=.*/, ''))
+          next(null, file)
+        })
+      )
+      .pipe(concat('js/vendor/tippy.js')),
     vfs.src('css/site.css', { ...opts, sourcemaps }).pipe(postcss(postcssPlugins)),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
     vfs

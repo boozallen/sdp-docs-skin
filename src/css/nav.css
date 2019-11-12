@@ -263,7 +263,21 @@ html.is-clipped--nav {
 }
 
 /*
-.nav-panel-explore .component .is-latest a::after {
-  content: " (latest)";
-}
+  CSS for version buttons
 */
+
+.button.versions {
+  border-radius: 100px;
+  display: inline-block;
+  float: right;
+}
+
+.tippy-tooltip.versions-theme {
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 1);
+  background-color: white;
+  color: black;
+}
+
+.version-option:hover{
+  background-color: #e2e2e2;
+}

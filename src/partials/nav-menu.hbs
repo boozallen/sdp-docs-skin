@@ -1,8 +1,33 @@
 {{#if page.navigation}}
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="{{relativize page.componentVersion.url}}">{{page.component.title}}</a></h3>
-{{> nav-tree navigation=page.navigation}}
+    {{#each site.components}}
+      <h3 class="title">
+        <a href="{{relativize this.latestVersion.url}}">
+          {{this.title}}
+        </a>
+
+        <button id="versions-button-{{this.name}}" data-template="{{this.name}}" class="button versions">
+          {{this.latestVersion.version}}
+        </button>
+      </h3>
+      
+      {{!-- hidden tooltip --}}
+      <div style="display: none;">
+        <div id="tippy-popover-{{this.name}}">
+          <p><strong>Current Version</strong></p>
+          <div class="version-option" id="{{this.name}}-{{this.latestVersion.version}}" component="{{this.name}}" version="{{this.latestVersion.version}}">{{this.latestVersion.version}}</div>
+          <p><strong>Previous Versions</strong></p>
+          {{#each this.versions}}
+            {{#unless (eq version ../latestVersion.version)}}
+              <div class="version-option" id="{{../name}}-{{./version}}" component="{{../name}}" version="{{./version}}">{{./version}}</div>
+            {{/unless}}
+          {{/each}}
+        </div>     
+      </div>
+     
+{{> nav-tree navigation=this.latestVersion.navigation}}
+    {{/each}}
   </nav>
 </div>
 {{/if}}
