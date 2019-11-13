@@ -2,14 +2,18 @@
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     {{#each site.components}}
+
       <h3 class="title">
         <a href="{{relativize this.latestVersion.url}}">
           {{this.title}}
         </a>
 
+        {{#if this.versions.[1]}}
         <button id="versions-button-{{this.name}}" component="{{this.name}}" data-template="{{this.name}}" class="button versions hidden">
           {{this.latestVersion.version}}
         </button>
+        {{/if}}
+
       </h3>
       
       {{!-- hidden tooltip --}}
