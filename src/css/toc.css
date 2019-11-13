@@ -1,0 +1,44 @@
+.toc-container {
+  position: fixed;
+  top: var(--navbar-height);
+  right: 0;
+  margin-right: 50px;
+  height: 100%;
+}
+
+.toc-menu-content {
+  list-style-type: none;
+}
+
+.toc-menu {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.toc.header {
+  border-left: 3px solid #989a9b;
+  font-size: 9pt;
+  padding: 5px 10px 0 25px;
+}
+
+.toc.header.active {
+  border-left: 3px solid #00a2df;
+}
+
+.toc.header:hover {
+  border-left: 3px solid #6b6c6d;
+}
+
+.toc.header-link {
+  color: #989a9b;
+}
+
+.toc.header-link:hover {
+  color: #6b6c6d;
+  text-decoration: none;
+}
+
+.toc.header-link.active {
+  color: #00a2df;
+}
