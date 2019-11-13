@@ -26,6 +26,10 @@
   border-left: 3px solid #00a2df;
 }
 
+.toc.header.active:hover {
+  border-left: 3px solid #00a2df;
+}
+
 .toc.header:hover {
   border-left: 3px solid #6b6c6d;
 }
