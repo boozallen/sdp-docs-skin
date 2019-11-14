@@ -1,9 +1,17 @@
 .toc-container {
-  position: fixed;
+  position: sticky;
   top: var(--navbar-height);
   right: 0;
   margin-right: 50px;
   height: 100%;
+  display: none;
+
+}
+
+@media screen and (min-width: 992px) {
+  .toc-container{
+    display: inline-block;
+  }
 }
 
 .toc-menu-content {
