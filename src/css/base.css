@@ -24,7 +24,8 @@ html {
 body {
   background: var(--body-background);
   color: var(--body-font-color);
-  font-family: var(--body-font-family);
+  /* font-family: var(--body-font-family); */
+  font-family: var(--booz-source-sans);
   line-height: var(--body-line-height);
   margin: 0;
 }
@@ -64,6 +65,8 @@ button {
   font-size: 1em;
   line-height: var(--body-line-height);
   margin: 0;
+  background-color: var(--booz-light-blue);
+  color: var(--color-white);
 }
 
 button::-moz-focus-inner {
