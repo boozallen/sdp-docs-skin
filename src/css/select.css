@@ -1,0 +1,28 @@
+.select-wrapper {
+    display: inline-block;
+    position: relative;
+}
+@media only screen and (min-width: 1024px) {
+    .select-wrapper{
+      display: none;
+    }
+  }
+.select-wrapper::before {
+    content: '▾';
+    position: absolute;
+    right: 8px;
+    top: 2px;
+}
+
+.select{
+    appearance: none;
+    background: #f8f8f8;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    box-shadow: none;
+    height: var(--input-md);
+    padding: var(--xs) 20px var(--xs) var(--xs);
+}
+.select::-ms-expand{
+    display: none;
+}
