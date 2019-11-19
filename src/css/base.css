@@ -60,16 +60,32 @@ strong strong { /* stylelint-disable-line */
 }
 
 button {
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1em;
-  line-height: var(--body-line-height);
+  display: inline-block;
+  border: none;
   margin: 0;
-  background-color: var(--booz-light-blue);
+  text-decoration: none;
+  background: var(--booz-light-blue);
   color: var(--color-white);
+  font-family: sans-serif;
+  font-size: .75rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-button::-moz-focus-inner {
-  border: none;
-  padding: 0;
+button:hover,
+button:focus {
+  background: var(--booz-light-blue-hover);
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
 }
