@@ -20,8 +20,9 @@
     border: 1px solid #d8d8d8;
     border-radius: 2px;
     box-shadow: none;
-    height: var(--input-md);
+    height: 30px;
     padding: var(--xs) 20px var(--xs) var(--xs);
+    width: 250px;
 }
 .select::-ms-expand{
     display: none;
