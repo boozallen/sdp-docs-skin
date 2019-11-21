@@ -21,9 +21,6 @@
   --booz-light-blue-hover: #098c99;
   --color-dark-blue: #253746;
 
-
-  
-
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
