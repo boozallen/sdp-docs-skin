@@ -57,5 +57,8 @@
     "typeface-roboto-mono": "0.0.75",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
+  },
+  "dependencies": {
+    "antora-lunr": "^0.5.0"
   }
 }

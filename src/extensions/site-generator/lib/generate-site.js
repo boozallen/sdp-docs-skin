@@ -11,6 +11,7 @@ const mapSite = require('@antora/site-mapper')
 const produceRedirects = require('@antora/redirect-producer')
 const publishSite = require('@antora/site-publisher')
 const { resolveConfig: resolveAsciiDocConfig } = require('@antora/asciidoc-loader')
+const generateIndex = require('antora-lunr')
 
 async function generateSite (args, env) {
   const playbook = buildPlaybook(args, env)
@@ -24,6 +25,8 @@ async function generateSite (args, env) {
   const composePage = createPageComposer(playbook, contentCatalog, uiCatalog, env)
   pages.forEach((page) => composePage(page, contentCatalog, navigationCatalog))
   const siteFiles = mapSite(playbook, pages).concat(produceRedirects(playbook, contentCatalog))
+  const index = generateIndex(playbook, pages)
+  siteFiles.push(generateIndex.createIndexFile(index))
   if (playbook.site.url) siteFiles.push(composePage(create404Page()))
   const siteCatalog = { getFiles: () => siteFiles }
   return publishSite(playbook, [contentCatalog, uiCatalog, siteCatalog])
