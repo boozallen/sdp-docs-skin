@@ -23,6 +23,7 @@
 .hljs-string,
 .hljs-doctag {
   color: #d14;
+  color: var(--color-code-orange);
 }
 
 .hljs-title,
