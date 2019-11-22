@@ -151,7 +151,8 @@ html.is-clipped--nav {
 }
 
 .nav-menu a {
-  color: inherit;
+  color: var(--color-dark-blue);
+  /* color: inherit; */
 }
 
 .nav-list {
@@ -304,8 +305,10 @@ html.is-clipped--nav {
 */
 
 .button.versions {
-  border-radius: 100px;
+  border-radius: 15px;
   float: right;
+  margin-right: 1em;
+  padding: 3px 6px 3px 6px;
 }
 
 .tippy-tooltip.versions-theme {

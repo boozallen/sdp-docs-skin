@@ -31,11 +31,11 @@
 }
 
 .toc.header.active {
-  border-left: 3px solid #00a2df;
+  border-left: 3px solid var(--booz-light-blue);
 }
 
 .toc.header.active:hover {
-  border-left: 3px solid #00a2df;
+  border-left: 3px solid var(--booz-light-blue);
 }
 
 .toc.header:hover {
@@ -52,5 +52,5 @@
 }
 
 .toc.header-link.active {
-  color: #00a2df;
+  color: var(--booz-light-blue);
 }

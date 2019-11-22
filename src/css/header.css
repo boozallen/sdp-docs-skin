@@ -25,7 +25,8 @@ body {
 .navbar-brand .navbar-item:first-child,
 .navbar-brand .navbar-item:first-child a {
   color: var(--navbar-font-color);
-  font-size: calc(22 / var(--rem-base) * 1rem);
+  font-size: calc(24 / var(--rem-base) * 1rem); 
+  font-weight: 600;
 }
 
 .navbar-brand .separator {

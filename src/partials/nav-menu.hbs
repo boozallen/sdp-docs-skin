@@ -26,6 +26,7 @@
             {{#unless (eq version ../latestVersion.version)}}
               <div class="version-option" id="{{../name}}-{{./version}}" component="{{../name}}" version="{{./version}}">{{./version}}</div>
             {{/unless}}
+            
           {{/each}}
         </div>     
       </div>
@@ -33,6 +34,7 @@
       {{#each this.versions}}
         <div id='nav-{{../name}}-{{./version}}' style='display: none;'>
           {{> nav-tree navigation=./navigation}}
+        
         </div>
       {{/each}}
 
