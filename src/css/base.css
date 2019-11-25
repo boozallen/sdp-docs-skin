@@ -3,7 +3,6 @@ body {
   height: 100%;
 }
 
-
 /* styling the horizontal scroll bar */
 ::-webkit-scrollbar {
   width: 3px;
@@ -81,11 +80,12 @@ button {
   background: var(--booz-light-blue);
   color: var(--color-white);
   font-family: sans-serif;
-  font-size: .75rem;
+  font-size: 0.75rem;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, 
-              transform 150ms ease;
+  transition:
+    background 250ms ease-in-out,
+    transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }

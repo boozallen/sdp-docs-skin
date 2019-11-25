@@ -44,8 +44,8 @@
 .nav {
   background: #fff;
   border-right: 1px solid #e8e9ea;
-  -webkit-box-shadow: 3px 0 15px rgba(0,0,0,.025);
-  box-shadow: 3px 0 15px rgba(0,0,0,.025);
+  -webkit-box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
   -webkit-box-flex: 0;
   -ms-flex: 0 0 275px;
   flex: 0 0 275px;
