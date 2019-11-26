@@ -36,12 +36,13 @@ html {
 }
 
 body {
-  background: var(--body-background);
+  background: var(--booz-dark-blue);
   color: var(--body-font-color);
   /* font-family: var(--body-font-family); */
   font-family: var(--booz-source-sans);
   line-height: var(--body-line-height);
   margin: 0;
+  
 }
 
 a {

@@ -21,6 +21,7 @@
   --booz-light-blue-hover: #098c99;
   --color-dark-blue: #253746;
   --color-code-orange: #D54728;
+  --color-booz-gray: #F8F8F8;
 
 
   /* fonts */
@@ -135,7 +136,7 @@
   --z-index-nav: 1;
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
-  --z-index-navbar: 4;
+  --z-index-navbar: 99;
   /* Dimensions */
   --xs: 5px;
   --sm: 10px;

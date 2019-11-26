@@ -2,9 +2,11 @@
   position: sticky;
   top: var(--navbar-height);
   right: 0;
-  margin-right: 50px;
-  height: 100%;
+  /* margin-right: 50px; */
+  padding-right: 20px;
+  min-height: 100%;
   display: none;
+  background: #F8F8F8;
 
 }
 
@@ -22,6 +24,7 @@
   width: 100%;
   padding-left: 20px;
   padding-right: 10px;
+
 }
 
 .toc.header {

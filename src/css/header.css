@@ -15,7 +15,7 @@ body {
   top: 0;
   width: 100%;
   word-wrap: break-word;
-  z-index: var(--z-index-navbar);
+  z-index: var(--z-index-navbar); 
 }
 
 .navbar a {
