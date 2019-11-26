@@ -42,7 +42,7 @@
 }
 
 .nav {
-  background: #fff;
+  background: var(--color-booz-gray);
   border-right: 1px solid #e8e9ea;
   -webkit-box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
   box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
@@ -140,6 +140,7 @@ html.is-clipped--nav {
   padding: 0.5rem 0.75rem;
   line-height: var(--nav-line-height);
   position: relative;
+  background: #f8f8f8;
 }
 
 .nav-menu h3.title {
