@@ -1,2 +1,2 @@
-src/js/lunr.js
-src/js/search.js
+src/js/vendor/lunr.js
+src/js/vendor/search.js

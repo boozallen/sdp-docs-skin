@@ -17,6 +17,7 @@
       </h3>
       
       {{!-- hidden tooltip --}}
+      {{#if this.versions.[1]}}
       <div style="display: none;">
         <div id="tippy-popover-{{this.name}}">
           <p><strong>Current Version</strong></p>
@@ -30,11 +31,11 @@
           {{/each}}
         </div>     
       </div>
+      {{/if}}
     
       {{#each this.versions}}
-        <div id='nav-{{../name}}-{{./version}}' style='display: none;'>
-          {{> nav-tree navigation=./navigation}}
-        
+        <div id='nav-{{../name}}-{{./version}}' {{#if ../versions.[1]}} style='display: none;' {{/if}}>
+          {{> nav-tree navigation=./navigation page=../../page}}
         </div>
       {{/each}}
 
