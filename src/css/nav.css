@@ -150,6 +150,14 @@ html.is-clipped--nav {
   padding: 0.25em 0 0.125em;
 }
 
+.nav-menu h3.title.is-current-component {
+  color: var(--booz-light-blue);
+  font-size: inherit;
+  font-weight: var(--body-font-weight-bold);
+  margin: 0;
+  padding: 0.25em 0 0.125em;
+}
+
 .nav-menu a {
   color: var(--color-dark-blue);
   /* color: inherit; */

@@ -3,10 +3,10 @@
   <nav class="nav-menu">
     {{#each site.components}}
 
-      <h3 class="title">
-        <a href="{{relativize this.latestVersion.url}}">
+      <h3 class="title {{#if (eq this.title ../page.component.latest.title)}}is-current-component{{/if}}">
+        {{!-- <a href="{{relativize this.latestVersion.url}}"> --}}
           {{this.title}}
-        </a>
+        {{!-- </a> --}}
 
         {{#if this.versions.[1]}}
         <button id="versions-button-{{this.name}}" component="{{this.name}}" data-template="{{this.name}}" class="button versions hidden">
