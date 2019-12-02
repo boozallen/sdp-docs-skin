@@ -42,7 +42,7 @@
 }
 
 .nav {
-  background: var(--color-booz-gray);
+  background: var(--panel-background);
   border-right: 1px solid #e8e9ea;
   -webkit-box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
   box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
@@ -52,7 +52,7 @@
   height: 100%;
   left: 0;
   overflow-y: scroll;
-  padding: 12px 15px 0;
+  /* padding: 12px 15px 0; */
   position: fixed;
   top: 0;
   -webkit-transform: translateX(-275px);
@@ -151,6 +151,14 @@ html.is-clipped--nav {
   padding: 0.25em 0 0.125em;
 }
 
+.nav-menu h3.title.is-current-component {
+  color: var(--booz-light-blue);
+  font-size: inherit;
+  font-weight: var(--body-font-weight-bold);
+  margin: 0;
+  padding: 0.25em 0 0.125em;
+}
+
 .nav-menu a {
   color: var(--color-dark-blue);
   /* color: inherit; */
@@ -204,6 +212,7 @@ html.is-clipped--nav {
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
   font-weight: var(--body-font-weight-bold);
+  color: var(--booz-light-blue);
 }
 
 .nav-panel-explore {

@@ -53,49 +53,4 @@
   function getIdFromHeader (header) {
     return header.innerText.replace(' ', '-').toLowerCase()
   }
-
-  var doc = document.querySelector('.doc')
-  var headings = find('h2[id]', doc)
-
-  var startOfContent = doc.querySelector('h1.page + *')
-  if (startOfContent) {
-    // generate list
-    var options = headings.reduce(function (accum, heading) {
-      var option = toArray(heading.childNodes).reduce(function (target, child) {
-        if (child.nodeName !== 'A') target.appendChild(child.cloneNode(true))
-        return target
-      }, document.createElement('option'))
-      option.value = '#' + heading.id
-      accum.appendChild(option)
-      return accum
-    }, document.createElement('select'))
-
-    var selectWrap = document.createElement('div')
-    selectWrap.classList.add('select-wrapper')
-    selectWrap.appendChild(options)
-
-    // jump to label
-    var jumpTo = document.createElement('option')
-    jumpTo.innerHTML = 'Jump to…'
-    jumpTo.setAttribute('disabled', true)
-    options.insertBefore(jumpTo, options.firstChild)
-    options.className = 'toc toc-embedded select'
-
-    // jump on change
-    options.addEventListener('change', function (e) {
-      var thisOptions = e.currentTarget.options
-      window.location.hash = thisOptions[thisOptions.selectedIndex].value
-    })
-
-    // add to page
-    doc.insertBefore(selectWrap, startOfContent)
-  }
-
-  function find (selector, from) {
-    return toArray((from || document).querySelectorAll(selector))
-  }
-
-  function toArray (collection) {
-    return [].slice.call(collection)
-  }
 })()

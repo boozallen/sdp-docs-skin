@@ -74,7 +74,7 @@
 .search-result-highlight {
   color: #174d8c;
   background: rgba(143, 187, 237, 0.1);
-  padding: .1em .05em;
+  padding: 0.1em 0.05em;
 }
 
 .search-result-item {
@@ -112,4 +112,3 @@
 .search-result-document-hit > a:hover {
   background-color: rgba(69, 142, 225, 0.05);
 }
-
