@@ -60,6 +60,7 @@ body {
   display: flex;
   flex-shrink: 0;
   height: var(--navbar-height);
+  background: var(--color-dark-blue);
 }
 
 .navbar-burger {
@@ -124,7 +125,7 @@ body {
   color: var(--navbar-menu-font-color);
   display: block;
   line-height: var(--doc-line-height);
-  padding: 0.5rem 1rem;
+  /* padding: 0rem 1rem; */
   position: relative;
 }
 
