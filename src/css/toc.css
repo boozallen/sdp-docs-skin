@@ -15,6 +15,7 @@
 
 .toc-menu-content {
   list-style-type: none;
+  padding: 0;
 }
 
 .toc-menu {
@@ -26,7 +27,7 @@
 .toc.header {
   border-left: 3px solid #989a9b;
   font-size: 9pt;
-  padding: 5px 10px 0 25px;
+  padding: 5px 10px;
 }
 
 .toc.header.active {
@@ -38,15 +39,16 @@
 }
 
 .toc.header:hover {
-  border-left: 3px solid #6b6c6d;
+  border-left: 3px solid var(--booz-light-blue);
 }
 
 .toc.header-link {
   color: #989a9b;
+  font-size: calc(15.5/var(--rem-base)*1rem);
 }
 
 .toc.header-link:hover {
-  color: #6b6c6d;
+  color: var(--booz-light-blue);
   text-decoration: none;
 }
 
