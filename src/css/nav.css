@@ -148,19 +148,30 @@ html.is-clipped--nav {
   font-weight: var(--body-font-weight-bold);
   margin: 0;
   padding: 0.25em 0 0.125em;
+  overflow-x: hidden;
+  display: inline-block;
 }
 
-.nav-menu h3.title.is-current-component {
-  color: var(--booz-light-blue);
+.nav-menu h3.title:hover {
+  color: var(--nav-heading-font-color-hover);
   font-size: inherit;
   font-weight: var(--body-font-weight-bold);
   margin: 0;
   padding: 0.25em 0 0.125em;
+  cursor: pointer;
+}
+
+.nav-menu h3.title.expanded {
+  color: var(--booz-light-blue);
 }
 
 .nav-menu a {
-  color: var(--color-dark-blue);
-  /* color: inherit; */
+  color: var(--nav-heading-font-color);
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: var(--nav-heading-font-color-hover);
 }
 
 .nav-list {
@@ -175,6 +186,14 @@ html.is-clipped--nav {
 .nav-item {
   list-style: none;
   margin-top: 0.5em;
+}
+
+.nav-item span.nav-text {
+  color: var(--nav-heading-font-color);
+}
+
+.nav-item span.nav-text:hover {
+  color: var(--nav-heading-font-color-hover);
 }
 
 /* adds some breathing room below a nested list */
@@ -315,6 +334,7 @@ html.is-clipped--nav {
 
 .button.versions {
   border-radius: 15px;
+  display: inline-block;
   float: right;
   margin-right: 1em;
   padding: 3px 6px 3px 6px;
