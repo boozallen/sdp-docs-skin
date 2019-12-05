@@ -27,8 +27,10 @@
 
 .toc.header {
   border-left: 3px solid #989a9b;
-  font-size: 9pt;
+  font-size: calc(17 / var(--rem-base) * 1rem);
   padding: 5px 10px 0 25px;
+  font-family: var(--booz-source-sans);
+
 }
 
 .toc.header.active {
