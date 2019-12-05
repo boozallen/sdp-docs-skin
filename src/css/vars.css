@@ -21,6 +21,7 @@
   --booz-light-blue-hover: #098c99;
   --color-dark-blue: #253746;
   --color-code-orange: #d54728;
+  --color-booz-gray: #f8f8f8;
 
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
@@ -130,11 +131,12 @@
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
+  --doc-max-width--desktop-2: calc(1400 / var(--rem-base) * 1rem);
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
-  --z-index-navbar: 4;
+  --z-index-navbar: 99;
   /* Dimensions */
   --xs: 5px;
   --sm: 10px;

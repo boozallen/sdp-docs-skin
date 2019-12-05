@@ -2,9 +2,11 @@
   position: sticky;
   top: var(--navbar-height);
   right: 0;
-  margin-right: 50px;
-  height: 100%;
+  /* margin-right: 50px; */
+  padding-right: 20px;
+  min-height: 100%;
   display: none;
+  background: #f8f8f8;
 }
 
 @media screen and (min-width: 1024px) {
@@ -26,8 +28,10 @@
 
 .toc.header {
   border-left: 3px solid #989a9b;
-  font-size: 9pt;
-  padding: 5px 10px;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  padding: 5px 10px 0 25px;
+  font-family: var(--booz-source-sans);
+
 }
 
 .toc.header.active {

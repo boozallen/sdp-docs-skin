@@ -11,7 +11,7 @@
   .doc {
     font-size: var(--doc-font-size--desktop);
     margin: var(--doc-margin--desktop);
-    max-width: var(--doc-max-width--desktop);
+    max-width: var(--doc-max-width--desktop-2);
   }
 }
 
