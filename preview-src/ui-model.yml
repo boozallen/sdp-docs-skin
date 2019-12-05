@@ -11,7 +11,34 @@ site:
       url: '#' 
       version: '1.1'
       displayVersion: '1.1'
-      navigation: []
+      navigation:
+      - root: true
+        content: Project ZZ
+        url: '#'
+        urlType: fragment
+        items:
+        - content: Quickstart
+          url: '#'
+          urlType: fragment
+          items:
+          - content: Brand&#8217;s Hardware &amp; Software Requirements
+            url: /zz/5.2/index.html
+            urlType: internal
+          - content: IDE Integration
+            url: '#'
+            urlType: fragment
+        - content: Liber Recusabo
+          url: '#liber-recusabo'
+          urlType: fragment
+        - content: Reference
+          items:
+          - content: Keyboard Shortcuts
+            url: '#'
+            urlType: fragment
+          - content: Importing and Exporting
+            url: '#'
+            urlType: fragment
+
     - url: '#' 
       version: '1.0'
       displayVersion: '1.0'
