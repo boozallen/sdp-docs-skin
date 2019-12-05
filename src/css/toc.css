@@ -6,8 +6,7 @@
   padding-right: 20px;
   min-height: 100%;
   display: none;
-  background: #F8F8F8;
-
+  background: #f8f8f8;
 }
 
 @media screen and (min-width: 1024px) {
@@ -24,7 +23,6 @@
   width: 100%;
   padding-left: 20px;
   padding-right: 10px;
-
 }
 
 .toc.header {
