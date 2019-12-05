@@ -14,14 +14,18 @@
 }
 
 #search-input {
-  color: #333;
+  color: #aebfcb;
   font-family: inherit;
   font-size: 0.95rem;
   width: 150px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid #5e8097;
   border-radius: 0.1em;
   line-height: 1.5;
   padding: 0 0.25em;
+  background-color: #5e8097;
+}
+input#search-input::placeholder{
+  color: #aebfcb;
 }
 
 @media screen and (min-width: 769px) {
