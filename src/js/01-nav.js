@@ -13,7 +13,7 @@
         componentNavs.style.display = 'none'
       } else {
         this.classList.add('expanded')
-        componentNavs.style.display = 'inline-block'
+        componentNavs.style.display = 'block'
       }
     })
   }
