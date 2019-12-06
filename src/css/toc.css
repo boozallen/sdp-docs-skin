@@ -15,6 +15,10 @@
   }
 }
 
+.toc-panel-menu{
+  margin-top: 2rem;
+}
+
 .toc-menu-content {
   list-style-type: none;
   padding: 0;

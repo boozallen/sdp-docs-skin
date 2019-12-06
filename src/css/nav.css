@@ -144,7 +144,7 @@ html.is-clipped--nav {
 }
 
 .nav-menu h3.title {
-  color: var(--nav-heading-font-color);
+  color: var(--color-dark-blue);
   font-size: inherit;
   font-weight: var(--body-font-weight-bold);
   margin: 0;
