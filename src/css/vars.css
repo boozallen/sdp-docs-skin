@@ -30,11 +30,11 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-70);
-  --body-font-family: "Roboto", sans-serif;
+  --body-font-family: "Source Sans Pro", Sans-Serif;
   --body-font-weight-bold: 500;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 500;
-  --booz-source-sans: "Source Sans Pro";
+  --booz-source-sans: "Source Sans Pro", Sans-Serif;
 
   /* base */
   --body-background: var(--color-white);

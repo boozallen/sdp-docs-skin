@@ -53,4 +53,23 @@
   function getIdFromHeader (header) {
     return header.innerText.replace(' ', '-').toLowerCase()
   }
+
+  // set progress bar width to toolbar width
+  function setProgressBarWidth () {
+    document.querySelector('.progress-container').style.width = document.querySelector('.toolbar').offsetWidth + 'px'
+    updateProgress()
+  }
+  setProgressBarWidth()
+  window.onresize = function () { setProgressBarWidth() }
+
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () { updateProgress() }
+
+  function updateProgress () {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    var articleProportion = 1
+    var scrolled = (winScroll / height) * articleProportion * 100
+    document.getElementById('myBar').style.width = scrolled + '%'
+  }
 })()

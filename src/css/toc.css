@@ -15,7 +15,7 @@
   }
 }
 
-.toc-panel-menu{
+.toc-panel-menu {
   margin-top: 2rem;
 }
 
@@ -35,7 +35,6 @@
   font-size: calc(17 / var(--rem-base) * 1rem);
   padding: 5px 10px 0 25px;
   font-family: var(--booz-source-sans);
-
 }
 
 .toc.header.active {
@@ -52,7 +51,7 @@
 
 .toc.header-link {
   color: #989a9b;
-  font-size: calc(15.5/var(--rem-base)*1rem);
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
 }
 
 .toc.header-link:hover {

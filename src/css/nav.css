@@ -179,7 +179,8 @@ html.is-clipped--nav {
   margin: 0;
   padding: 0;
 }
-.component-nav-trees{
+
+.component-nav-trees {
   padding: 0 0.75rem 0.5rem;
 }
 
@@ -192,7 +193,7 @@ html.is-clipped--nav {
   margin-top: 0.5em;
 }
 
-button.nav-item-toggle{
+button.nav-item-toggle {
   background: transparent url(../img/caret.svg) no-repeat center / 50%;
 }
 

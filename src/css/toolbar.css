@@ -81,3 +81,20 @@
   height: 20px;
   padding-top: 0.25rem;
 }
+
+/* The progress container (grey background) */
+.progress-container {
+  display: block;
+  height: 2px;
+  position: fixed;
+  background: var(--panel-background);
+  top: calc(var(--navbar-height) + var(--toolbar-height));
+  z-index: var(--z-index-toolbar);
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 2px;
+  background: var(--booz-light-blue-hover);
+  width: 0%;
+}
