@@ -1,6 +1,25 @@
 ;(function () {
   'use strict'
 
+  var navComponents = document.querySelectorAll('.nav-menu h3.title')
+  for (var i = 0; i < navComponents.length; i++) {
+    var c = navComponents[i]
+    c.addEventListener('click', function cClick () {
+      var componentNavs = findNext(this, '[component-nav-trees]')
+      console.log('component navs -> ')
+      console.log(componentNavs)
+      if (this.classList.contains('expanded')) {
+        this.classList.remove('expanded')
+        componentNavs.style.display = 'none'
+      } else {
+        this.classList.add('expanded')
+        componentNavs.style.display = 'block'
+      }
+    })
+  }
+
+  // default JS below
+
   var navContainer = document.querySelector('.nav-container')
   var navToggle = document.querySelector('.nav-toggle')
 
@@ -30,12 +49,16 @@
     }
   })
 
-  nav.querySelector('.context').addEventListener('click', function () {
-    var currentPanel = nav.querySelector('.is-active[data-panel]')
-    var activatePanel = currentPanel.dataset.panel === 'menu' ? 'explore' : 'menu'
-    currentPanel.classList.toggle('is-active')
-    nav.querySelector('[data-panel=' + activatePanel + ']').classList.toggle('is-active')
-  })
+  var context = nav.querySelector('.context')
+
+  if (context) {
+    context.addEventListener('click', function () {
+      var currentPanel = nav.querySelector('.is-active[data-panel]')
+      var activatePanel = currentPanel.dataset.panel === 'menu' ? 'explore' : 'menu'
+      currentPanel.classList.toggle('is-active')
+      nav.querySelector('[data-panel=' + activatePanel + ']').classList.toggle('is-active')
+    })
+  }
 
   // NOTE prevent text from being selected by double click
   menuPanel.addEventListener('mousedown', function (e) {
@@ -103,5 +126,14 @@
       while ((el = el.nextSibling) && el.nodeType !== 1);
     }
     return el && selector ? el[el.matches ? 'matches' : 'msMatchesSelector'](selector) && el : el
+  }
+
+  function findNext (elem, selector) {
+    var sibling = elem.nextElementSibling
+    if (!selector) return sibling
+    while (sibling) {
+      if (sibling.matches(selector)) return sibling
+      sibling = sibling.nextElementSibling
+    }
   }
 })()

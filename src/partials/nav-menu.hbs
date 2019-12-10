@@ -1,8 +1,53 @@
 {{#if page.navigation}}
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="{{relativize page.componentVersion.url}}">{{page.component.title}}</a></h3>
-{{> nav-tree navigation=page.navigation}}
+    {{#each site.components}}
+      <div>
+        <h3 class="title {{#if (eq ../page.component this)}}expanded{{/if}}">
+          {{this.title}}
+        </h3>
+        
+        {{#if this.versions.[1]}}
+        <button id="versions-button-{{this.name}}" component="{{this.name}}" data-template="{{this.name}}" class="button versions hidden">
+          {{this.latestVersion.version}}
+        </button>
+        {{/if}}
+        
+        {{!-- hidden tooltip --}}
+        {{#if this.versions.[1]}}
+        <div style="display: none;">
+          <div id="tippy-popover-{{this.name}}">
+            <p><strong>Current Version</strong></p>
+            <div class="version-option" id="{{this.name}}-{{this.latestVersion.version}}" component="{{this.name}}" version="{{this.latestVersion.version}}">{{this.latestVersion.version}}</div>
+            <p><strong>Previous Versions</strong></p>
+            {{#each this.versions}}
+              {{#unless (eq version ../latestVersion.version)}}
+                <div class="version-option" id="{{../name}}-{{./version}}" component="{{../name}}" version="{{./version}}">{{./version}}</div>
+              {{/unless}}
+            {{/each}}
+          </div>     
+        </div>
+        {{/if}}
+
+        {{!-- initially hidden --}}
+        <div class="component-nav-trees" component-nav-trees='true' 
+        {{#if (eq ../page.component this)}}
+          
+        {{else }}
+          style='display: none;'
+        {{/if}}
+        
+        >
+        {{#each this.versions}}
+          <div id='nav-{{../name}}-{{./version}}' {{#if ../versions.[1]}} style='display: none;' {{/if}}>
+            <div style="display: inline-block; clear: both;">
+            {{> nav-tree navigation=./navigation page=../../page}}
+            </div>
+          </div>
+        {{/each}}
+        </div>
+      </div>
+    {{/each}}
   </nav>
 </div>
 {{/if}}

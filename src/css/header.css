@@ -25,7 +25,8 @@ body {
 .navbar-brand .navbar-item:first-child,
 .navbar-brand .navbar-item:first-child a {
   color: var(--navbar-font-color);
-  font-size: calc(22 / var(--rem-base) * 1rem);
+  font-size: calc(24 / var(--rem-base) * 1rem);
+  font-weight: 600;
 }
 
 .navbar-brand .separator {
@@ -59,6 +60,7 @@ body {
   display: flex;
   flex-shrink: 0;
   height: var(--navbar-height);
+  background: var(--color-dark-blue);
 }
 
 .navbar-burger {
@@ -123,7 +125,7 @@ body {
   color: var(--navbar-menu-font-color);
   display: block;
   line-height: var(--doc-line-height);
-  padding: 0.5rem 1rem;
+  /* padding: 0rem 1rem; */
   position: relative;
 }
 

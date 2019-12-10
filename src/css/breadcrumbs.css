@@ -1,6 +1,9 @@
 .breadcrumbs {
   display: none;
   flex: 1 1;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  background: var(--panel-background);
   padding: 0 0.5rem 0 0.75rem;
   line-height: var(--nav-line-height);
 }

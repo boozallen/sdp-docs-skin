@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://gitlab.com/antora/antora-ui-default.git"
   },
+  "scripts": {
+    "bundle": "gulp bundle"
+  },
   "engines": {
     "node": ">= 8.0.0"
   },
@@ -49,9 +52,14 @@
     "stylelint": "~11.1",
     "stylelint-config-standard": "~19.0",
     "through2": "~3.0",
+    "tippy.js": "~4.3",
     "typeface-roboto": "0.0.75",
     "typeface-roboto-mono": "0.0.75",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
+  },
+  "dependencies": {
+    "@antora/site-generator-default": "^2.1.2",
+    "antora-lunr": "^0.5.0"
   }
 }

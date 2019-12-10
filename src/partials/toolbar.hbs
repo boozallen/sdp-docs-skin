@@ -4,10 +4,12 @@
   <a href="{{relativize site.homeUrl}}" class="home-link{{#if page.home}} is-current{{/if}}"></a>
   {{/if}}
 {{> breadcrumbs}}
-{{> page-versions}}
   {{#if (and page.fileUri (not env.CI))}}
-  <div class="edit-this-page"><a href="{{page.fileUri}}">Edit this Page</a></div>
+  <a class='edit-this-page' href="{{page.fileUri}}"><i class="la la-pencil-alt"></i>Edit on GitHub</a>
   {{else if (and page.editUrl (not page.origin.private))}}
-  <div class="edit-this-page"><a href="{{page.editUrl}}">Edit this Page</a></div>
+  <a class='edit-this-page' href="{{page.editUrl}}"><i class="la la-pencil-alt"></i> Edit on GitHub</a>
   {{/if}}
 </div>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>

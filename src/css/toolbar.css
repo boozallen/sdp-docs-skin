@@ -1,7 +1,7 @@
 .toolbar {
   color: var(--toolbar-font-color);
   align-items: center;
-  background-color: var(--toolbar-background);
+  background-color: var(--panel-background);
   box-shadow: 0 1px 0 var(--toolbar-border-color);
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -53,17 +53,48 @@
   background-image: url(../img/home.svg);
 }
 
-.edit-this-page {
-  display: none;
-  padding-right: 0.5rem;
+.toolbar .edit-this-page {
+  color: var(--toolbar-muted-color);
+  border: 2px solid var(--toolbar-muted-color);
+  border-radius: 4px;
+  padding: 0.25rem;
+  text-decoration: none;
+}
+
+.toolbar .edit-this-page:hover {
+  color: var(--booz-light-blue-hover);
+  border: 2px solid var(--booz-light-blue-hover);
+  border-radius: 4px;
+  padding: 0.25rem;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .edit-this-page {
+  .toolbar .edit-this-page {
     display: block;
   }
 }
 
-.toolbar .edit-this-page a {
-  color: var(--toolbar-muted-color);
+.github-mark {
+  background: transparent url(../img/gitHub-mark.svg) no-repeat center / 50%;
+  width: 20px;
+  height: 20px;
+  padding-top: 0.25rem;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  display: block;
+  height: 2px;
+  position: fixed;
+  background: var(--panel-background);
+  top: calc(var(--navbar-height) + var(--toolbar-height));
+  z-index: var(--z-index-toolbar);
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 2px;
+  background: var(--booz-light-blue-hover);
+  width: 0%;
 }

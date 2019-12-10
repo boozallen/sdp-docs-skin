@@ -5,12 +5,25 @@
   width: 100%;
   font-size: calc(17 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: flex;
 }
 
 @media screen and (min-width: 769px) {
   .nav-container {
     width: var(--nav-width);
+    border-right: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: auto;
+    left: auto;
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    z-index: 11;
   }
 }
 
@@ -29,15 +42,39 @@
 }
 
 .nav {
-  background: var(--nav-background);
-  position: relative;
-  top: var(--toolbar-height);
-  height: var(--nav-height);
+  background: var(--panel-background);
+  border-right: 1px solid #e8e9ea;
+  -webkit-box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.025);
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 275px;
+  flex: 0 0 275px;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  /* padding: 12px 15px 0; */
+  position: fixed;
+  top: 0;
+  -webkit-transform: translateX(-275px);
+  transform: translateX(-275px);
+  width: 275px;
+  z-index: 14;
 }
 
 @media screen and (min-width: 769px) {
   .nav {
-    box-shadow: 0.5px 0 3px var(--nav-border-color);
+    border-right: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: auto;
+    left: auto;
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    z-index: 11;
   }
 }
 
@@ -103,23 +140,48 @@ html.is-clipped--nav {
   padding: 0.5rem 0.75rem;
   line-height: var(--nav-line-height);
   position: relative;
+  background: #f8f8f8;
 }
 
 .nav-menu h3.title {
-  color: var(--nav-heading-font-color);
+  color: var(--color-dark-blue);
   font-size: inherit;
   font-weight: var(--body-font-weight-bold);
   margin: 0;
   padding: 0.25em 0 0.125em;
+  overflow-x: hidden;
+  display: inline-block;
+}
+
+.nav-menu h3.title:hover {
+  color: var(--nav-heading-font-color-hover);
+  font-size: inherit;
+  font-weight: var(--body-font-weight-bold);
+  margin: 0;
+  padding: 0.25em 0 0.125em;
+  cursor: pointer;
+}
+
+.nav-menu h3.title.expanded {
+  color: var(--booz-light-blue);
 }
 
 .nav-menu a {
-  color: inherit;
+  color: var(--nav-heading-font-color);
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: var(--nav-heading-font-color-hover);
 }
 
 .nav-list {
-  margin: 0 0 0 0.75rem;
+  margin: 0;
   padding: 0;
+}
+
+.component-nav-trees {
+  padding: 0 0.75rem 0.5rem;
 }
 
 .nav-menu > .nav-list {
@@ -129,6 +191,18 @@ html.is-clipped--nav {
 .nav-item {
   list-style: none;
   margin-top: 0.5em;
+}
+
+button.nav-item-toggle {
+  background: transparent url(../img/caret.svg) no-repeat center / 50%;
+}
+
+.nav-item span.nav-text {
+  color: var(--nav-heading-font-color);
+}
+
+.nav-item span.nav-text:hover {
+  color: var(--nav-heading-font-color-hover);
 }
 
 /* adds some breathing room below a nested list */
@@ -165,6 +239,7 @@ html.is-clipped--nav {
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
   font-weight: var(--body-font-weight-bold);
+  color: var(--booz-light-blue);
 }
 
 .nav-panel-explore {
@@ -263,7 +338,30 @@ html.is-clipped--nav {
 }
 
 /*
-.nav-panel-explore .component .is-latest a::after {
-  content: " (latest)";
-}
+  CSS for version buttons
 */
+
+.button.versions {
+  border-radius: 15px;
+  display: inline-block;
+  float: right;
+  margin-right: 1em;
+  padding: 3px 6px 3px 6px;
+}
+
+.tippy-tooltip.versions-theme {
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 1);
+  background-color: white;
+  color: black;
+}
+
+.version-option:hover {
+  background-color: #e2e2e2;
+}
+
+/*
+  hidden by default.
+*/
+.button.versions.hidden {
+  display: none;
+}
