@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:5000/component-b/2.0/index.html</loc>
+<lastmod>2019-12-10T15:02:12.171Z</lastmod>
+</url>
+<url>
+<loc>http://localhost:5000/component-b/2.0/module-one/overview.html</loc>
+<lastmod>2019-12-10T15:02:12.171Z</lastmod>
+</url>
+<url>
+<loc>http://localhost:5000/component-b/1.0/index.html</loc>
+<lastmod>2019-12-10T15:02:12.171Z</lastmod>
+</url>
+<url>
+<loc>http://localhost:5000/component-b/1.0/module-one/overview.html</loc>
+<lastmod>2019-12-10T15:02:12.171Z</lastmod>
+</url>
+</urlset>
