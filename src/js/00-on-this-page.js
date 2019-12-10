@@ -51,7 +51,7 @@
   }
 
   function getIdFromHeader (header) {
-    return header.innerText.replace(' ', '-').toLowerCase()
+    return header.id
   }
 
   // set progress bar width to toolbar width
