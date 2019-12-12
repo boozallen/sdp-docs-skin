@@ -350,7 +350,7 @@ button.nav-item-toggle {
 }
 
 .tippy-tooltip.versions-theme {
-  box-shadow: 0 2px 9px rgba(0, 0, 0, 1);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.35);
   background-color: white;
   color: black;
 }
@@ -358,7 +358,7 @@ button.nav-item-toggle {
 .version-option:hover {
   background-color: #e2e2e2;
 }
-
+s
 /*
   hidden by default.
 */
