@@ -303,6 +303,7 @@
   display: inline-flex;
   align-items: center;
   height: 100%;
+  font-weight: 700;
 }
 
 .doc .admonitionblock .icon i::after {
@@ -474,7 +475,7 @@
 
 .doc .exampleblock > .content {
   background: var(--example-background);
-  border: 0.25rem solid var(--example-border-color);
+  border: 0.1rem solid var(--example-border-color);
   border-radius: 0.5rem;
   padding: 0.75rem;
 }

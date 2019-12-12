@@ -146,7 +146,7 @@ html.is-clipped--nav {
 .nav-menu h3.title {
   color: var(--color-dark-blue);
   font-size: inherit;
-  font-weight: var(--body-font-weight-bold);
+  font-weight: 700;
   margin: 0;
   padding: 0.25em 0 0.125em;
   overflow-x: hidden;
@@ -156,7 +156,7 @@ html.is-clipped--nav {
 .nav-menu h3.title:hover {
   color: var(--nav-heading-font-color-hover);
   font-size: inherit;
-  font-weight: var(--body-font-weight-bold);
+  font-weight: 700;
   margin: 0;
   padding: 0.25em 0 0.125em;
   cursor: pointer;
