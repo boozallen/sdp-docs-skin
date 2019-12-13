@@ -4,6 +4,7 @@
       <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
       {{#if env.DOCSEARCH_ENABLED}}
         <div class="navbar-item">
+          <i class="fas fa-search search-icon"></i>
           <input id="search-input" type="text" placeholder="Search docs">
         </div>
       {{/if}}

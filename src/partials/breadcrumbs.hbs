@@ -1,6 +1,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   {{#if page.breadcrumbs}}
   <ul>
+    <i class="fas fa-home home-icon"></i>
     {{#with page.componentVersion}}
     {{#if (and ./title (not (or ./root (eq @root.page.breadcrumbs.0.content ./title))))}}
     <li><a href="{{{relativize ./url}}}">{{{./title}}}</a></li>
