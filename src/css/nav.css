@@ -153,17 +153,31 @@ html.is-clipped--nav {
   display: inline-block;
 }
 
-.nav-menu h3.title:hover {
+.nav-menu h3.title.expanded {
+  border-left: 3px solid var(--booz-light-blue);
+  color: var(--booz-light-blue);
+}
+
+.nav-menu h3.title {
+  border-left: 3px solid #989a9b;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  padding: 5px 10px 0 25px;
+  font-family: var(--booz-source-sans);
+}
+
+
+.nav-menu h3.title.active:hover {
   color: var(--nav-heading-font-color-hover);
   font-size: inherit;
   font-weight: 700;
   margin: 0;
   padding: 0.25em 0 0.125em;
   cursor: pointer;
+  border-left: 3px solid var(--booz-light-blue);
 }
 
-.nav-menu h3.title.expanded {
-  color: var(--booz-light-blue);
+.nav-menu h3.title:hover {
+  border-left: 3px solid var(--booz-light-blue);
 }
 
 .nav-menu a {
