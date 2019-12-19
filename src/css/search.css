@@ -13,23 +13,20 @@
   }
 }
 
-
 @media screen and (max-width: 650px) {
-  .search-icon{
+  .search-icon {
     visibility: hidden;
   }
-  
 }
 
-.search-icon{
+.search-icon {
   padding-left: 10px;
   color: #aebfcb;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
-
-.home-icon{
+.home-icon {
   padding-right: 10px;
   padding-top: 3px;
 }

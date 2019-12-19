@@ -145,26 +145,22 @@ html.is-clipped--nav {
 
 .nav-menu h3.title {
   color: var(--color-dark-blue);
-  font-size: inherit;
+  /* font-size: inherit; */
   font-weight: 700;
   margin: 0;
-  padding: 0.25em 0 0.125em;
+  /* padding: 0.25em 0 0.125em; */
   overflow-x: hidden;
   display: inline-block;
-}
-
-.nav-menu h3.title.expanded {
-  border-left: 3px solid var(--booz-light-blue);
-  color: var(--booz-light-blue);
-}
-
-.nav-menu h3.title {
   border-left: 3px solid #989a9b;
   font-size: calc(17 / var(--rem-base) * 1rem);
   padding: 5px 10px 0 25px;
   font-family: var(--booz-source-sans);
 }
 
+.nav-menu h3.title.expanded {
+  border-left: 3px solid var(--booz-light-blue);
+  color: var(--booz-light-blue);
+}
 
 .nav-menu h3.title.active:hover {
   color: var(--nav-heading-font-color-hover);
@@ -364,7 +360,7 @@ button.nav-item-toggle {
 }
 
 .tippy-tooltip.versions-theme {
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.35);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.35);
   background-color: white;
   color: black;
 }
@@ -372,7 +368,7 @@ button.nav-item-toggle {
 .version-option:hover {
   background-color: #e2e2e2;
 }
-s
+
 /*
   hidden by default.
 */
