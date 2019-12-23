@@ -12,5 +12,6 @@ content:
 
 ui:
   bundle:
+    # url: https://github.com/boozallen/sdp-docs-skin/blob/versions-in-nav/preview-src/ui-model.yml
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
