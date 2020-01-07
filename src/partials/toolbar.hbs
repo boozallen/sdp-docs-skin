@@ -4,6 +4,12 @@
   <a href="{{relativize site.homeUrl}}" class="home-link{{#if page.home}} is-current{{/if}}"></a>
   {{/if}}
 {{> breadcrumbs}}
+
+
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    Button
+  </button>
+
   {{#if (and page.fileUri (not env.CI))}}
   <a class='edit-this-page' href="{{page.fileUri}}"><i class="la la-pencil-alt"></i>Edit on GitHub</a>
   {{else if (and page.editUrl (not page.origin.private))}}

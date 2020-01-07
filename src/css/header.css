@@ -7,6 +7,7 @@ body {
 }
 
 .navbar {
+  overflow-x: hidden;
   background: var(--navbar-background);
   color: var(--navbar-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
@@ -197,6 +198,7 @@ body {
 
   .navbar-item,
   .navbar-link {
+    padding-left: 1rem;
     align-items: center;
     display: flex;
   }

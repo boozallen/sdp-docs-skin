@@ -508,6 +508,10 @@
   white-space: pre-wrap;
 }
 
+.article {
+  overflow-x: hidden;
+}
+
 .doc pre:not(.highlight),
 .doc pre.highlight code {
   background: var(--pre-background);

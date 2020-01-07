@@ -12,7 +12,7 @@ site:
       version: '1.1'
       displayVersion: '1.1'
       navigation:
-      - root: true
+      - root: false
         content: Project ZZ
         url: '#'
         urlType: fragment

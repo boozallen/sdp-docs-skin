@@ -32,8 +32,9 @@ a + .breadcrumbs {
 }
 
 .breadcrumbs li::after {
-  content: "/";
+  content: ">";
   padding: 0 0.5rem;
+  font-size: 4;
 }
 
 .breadcrumbs li:last-of-type::after {
