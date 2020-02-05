@@ -1,0 +1,35 @@
+.breadcrumbs {
+  display: inline-flex;
+  margin-bottom: 1.75rem;
+  line-height: var(--nav-line-height);
+  font-size: 0.5em; 
+  max-width: 60%; 
+  position: relative;
+  bottom: 0.5rem; 
+}
+
+a + .breadcrumbs {
+  padding-left: 0.05rem;
+}
+
+.breadcrumbs ul {
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.4em; 
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin: 0;
+}
+
+.breadcrumbs li::after {
+  content: "/";
+  padding: 0 0.5rem;
+}
+
+.breadcrumbs li:last-of-type::after {
+  content: none;
+}

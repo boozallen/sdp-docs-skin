@@ -1,0 +1,67 @@
+//////// CUSTOM 
+@import "./common";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/elevation/mdc-elevation";
+@import "@material/textfield/mdc-text-field";
+
+
+
+// top app bar 
+.mdc-top-app-bar {
+  @include mdc-elevation(2);
+  @include mdc-top-app-bar-fill-color($mdc-theme-primary);
+
+  border-bottom: 5px solid $mdc-theme-secondary; 
+  position: fixed; 
+  top: 0; 
+  height: var(--navbar-height);
+}
+
+.toolbar-logo{
+  width: 3rem; 
+  padding-top: 0.5rem; 
+}
+
+// search button 
+.mdc-icon-button.search {
+  background: transparent; 
+  border: none; 
+  transition: all 0.2s ease-out;
+  outline: none;
+  padding-bottom: 0.1em;
+}
+
+.mdc-icon-button.search:hover {
+  cursor: pointer; 
+}
+
+.search.mdc-icon-button--on {
+  transform: rotate(90deg);
+  transition: transform 0.2s; 
+  border: 0;
+}
+
+// search text box
+
+.mdc-text-field.search{
+  @include mdc-text-field-height(40px);
+  @include mdc-text-field-ink-color($mdc-theme-primary);
+  max-width: 0; 
+  transition: all 0.2s ease; 
+  margin-right: 2rem; 
+}
+
+.mdc-text-field.search.expanded{
+  max-width: 100%; 
+  transition: all 0.75s ease-in-out; 
+  transition-delay: 0.25s;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: $mdc-theme-primary;
+  font-size: 12px; 
+}
+
+.mdc-text-field__input.search { 
+  color: $mdc-theme-primary
+}

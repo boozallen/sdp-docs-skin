@@ -1,0 +1,30 @@
+@import "./common";
+
+.material-icons.codeCopyButton {
+    display: none;
+    color: var(--pre-annotation-font-color);
+    font-size: calc(13.5 / var(--rem-base) * 2rem);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    position: absolute;
+    top: 1.25rem;
+    right: 0.25rem;
+  }
+  
+  .material-icons.codeCopyButton:hover {
+    color: var(--color-gray-70);
+    cursor: pointer;
+  }
+  
+  .doc .listingblock:hover .material-icons.codeCopyButton {
+    display: block;
+  }
+  
+  .tippy-tooltip.clipboard-theme {
+    background-color: $mdc-theme-primary;
+    color: white;
+  }
+
+  .tippy-tooltip.clipboard-theme .tippy-arrow {
+    border-bottom-color: $mdc-theme-primary;
+  }

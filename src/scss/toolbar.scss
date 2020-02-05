@@ -1,0 +1,41 @@
+@import './common';
+@import "@material/elevation/mdc-elevation";
+@import "@material/icon-button/mdc-icon-button";
+
+.toolbar {
+  color: var(--toolbar-font-color);
+  align-items: center;
+  background-color: var(--toolbar-background);
+  box-shadow: 0 1px 0 var(--toolbar-border-color);
+  display: flex;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  height: var(--toolbar-height);
+  justify-content: flex-start;
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: var(--z-index-toolbar);
+  display: none; 
+  width: 100%; 
+  flex: left; 
+}
+
+.toolbar a {
+  color: inherit;
+}
+
+.nav-toggle {
+  background: url(../img/menu.svg) no-repeat 50% 47.5%;
+  background-size: 49%;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  height: 2.5rem;
+  padding: 0;
+  width: 2.5rem;
+  margin-right: -0.25rem;
+}
+
+#toolbar-nav-toggle {
+  @include mdc-icon-button-ink-color($mdc-theme-secondary)
+  @include mdc-icon-button-density(-3)
+}

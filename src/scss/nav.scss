@@ -1,0 +1,170 @@
+
+// customizations 
+// navigation
+@import "./common";
+@import "@material/drawer/mdc-drawer";
+@import "@material/ripple/mdc-ripple";
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+@import "@material/select/mdc-select";
+
+$nav-width: 15vw; 
+$expand-animation-time: 0.3s; 
+
+//common 
+div.nav-container {
+  @include mdc-elevation(4);
+
+  .material-icons.show-more {
+    color: black; 
+    font-size: 1.2em; 
+    min-width: 1rem; 
+    transition: all $expand-animation-time ease-in-out; 
+    
+    &:hover {
+      cursor: pointer; 
+    }
+
+    &.expanded {
+      transform: rotate(90deg);
+      transition: all $expand-animation-time ease-in-out; 
+    }
+  }
+
+  .nav-item {
+    font-size: 0.75vw; 
+    max-width: 16rem; 
+    color: black; 
+    vertical-align: middle;
+    padding-top: 0.2rem; 
+    padding-bottom: 0.2rem; 
+
+    a{
+      text-decoration: none; 
+      color: black; 
+    }
+
+
+    & .is-current-page {
+      color: $mdc-theme-secondary; 
+    }
+
+    &:hover {
+      background-color: #EEEEEE;
+    }
+  }
+
+  .nav-item .spacer {
+    display: inline-block; 
+    padding-left: 1.2rem; 
+  }
+
+}
+
+.nav-children-panel {
+  padding-left: 0.5rem; 
+  max-height: 0;
+  overflow: hidden; 
+  transition: max-height $expand-animation-time ease-out;
+}
+
+.nav-trees {
+  max-width: 100%;
+  margin: 0; 
+  margin-right: 2rem; 
+}
+
+// version select 
+.version-box {
+  margin: 0; 
+  float: right; 
+  display: inline-block; 
+  margin-top: 4px; 
+
+  span {
+    color: #aaa;
+    padding-left: 1.2em; 
+    padding-top: -0.1em; 
+    font-size: 0.5vw; 
+  }
+
+  &:hover span {
+    color: $mdc-theme-secondary;
+  }
+}
+
+
+.select-version {
+	display: block;
+	font-size: 0.6em;
+	color: #aaa;
+	padding: 0.5vh 0.1vw;
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	border-radius: .5em;
+  -moz-appearance: none;
+}
+
+.select-version::-ms-expand {
+	display: none;
+}
+
+.select-version:hover {
+  border-color: $mdc-theme-secondary;
+  color: $mdc-theme-secondary;
+}
+
+.select-version:focus {
+	border-color: #aaa;
+	box-shadow: #aaa;
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: $mdc-theme-secondary;
+  border-color: $mdc-theme-secondary;
+	outline: none;
+}
+
+.select-version option {
+	font-weight:normal;
+}
+
+.clear {
+  clear: both; 
+}
+
+.hide {
+  display: none !important; 
+}
+
+
+// mobile view 
+@media screen and (max-width: 1024px) {
+  div.nav-container{ 
+    max-width: 0; 
+
+    .open { 
+      max-width: $nav-width; 
+    }
+
+    aside { 
+      width: 0; 
+    }
+  }
+}
+
+
+@media screen and (min-width: 1025px){
+  div.nav-container {
+    min-width: $nav-width; 
+    aside {
+      margin-top: 5rem;
+      padding-left: 0.5rem;
+      position: fixed;
+      top: 0; 
+      bottom: 0;  
+      overflow-y: auto;
+      width: $nav-width; 
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{{#if page.navigation}}
+  {{#each site.components}}
+    <div class="nav-trees">
+      <div class="version-box">
+        <select data-component="{{this.name}}" class="select-version">
+          {{#each this.versions}}
+            <option value="{{this.version}}">
+              {{this.displayVersion}}
+            </option>
+          {{/each}}
+        </select>
+      </div>
+      {{#each this.versions}}
+        <div data-component="{{../name}}" data-version="{{this.version}}" class="{{#unless (eq ./version ../latestVersion.version)}}hide{{/unless}}">
+          <div class="nav-item">
+            {{#if ./navigation.length}}
+              <i class="material-icons show-more" aria-hidden="true">chevron_right</i>
+            {{/if}}
+            <a  class="{{#unless ./navigation.length}}spacer{{/unless}}{{#if (eq @root.page.url ./url)}} is-current-page{{/if}}" href="{{{relativize ./url}}}">
+              {{{./title}}}
+            </a>
+          </div>
+          <div class="nav-children-panel">
+            {{> nav-tree navigation=./navigation }}
+          </div>
+        </div>
+      {{/each}}
+    </div>      
+    <div class="clear"></div>
+  {{/each}}
+{{/if}}
+
