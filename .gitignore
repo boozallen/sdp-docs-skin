@@ -3,3 +3,10 @@ public/
 build/
 .DS_STORE
 .editorconfig
+
+# Webstorm
+.idea
+
+# gh-pages builds
+gh-pages/*
+!gh-pages/index.html
