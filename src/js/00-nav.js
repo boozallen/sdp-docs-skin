@@ -32,14 +32,19 @@
       navShow.classList.remove('hide')
       navHide.classList.add('hide')
     })
+
+    // Disable select if there is only one version
+    if (s.options.length === 1) {
+      s.classList.add('single-version');
+      s.disabled = true;
+    }
   }
 
   /// nav-tree
   var x = document.querySelectorAll('.nav-item .material-icons'); 
-  for(var i = 0; i < x.length; i++){ 
+  for(var i = 0; i < x.length; i++){
     mdc.ripple.MDCRipple.attachTo(x[i])
     x[i].addEventListener('click', function(event){
-      console.log('click!')
       var item = event.target
       var panel = item.parentElement.nextElementSibling
       var height, itemHasChildren = false;

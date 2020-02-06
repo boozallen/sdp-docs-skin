@@ -8,37 +8,7 @@ site:
     url: '#'
     versions:
     - &latest_version_abc
-      url: '#' 
-      version: '1.1'
-      displayVersion: '1.1'
-      navigation:
-      - root: true
-        content: Jenkins Templating Engine
-        url: '#'
-        urlType: fragment
-        items:
-        - content: Quickstart 1.1
-          url: '#'
-          urlType: fragment
-          items:
-          - content: Brand&#8217;s Hardware &amp; Software Requirements extra long title
-            url: /xyz/5.2/index.html
-            urlType: internal
-          - content: IDE Integration
-            url: '#'
-            urlType: fragment
-        - content: Liber Recusabo
-          url: '#liber-recusabo'
-          urlType: fragment
-        - content: Reference
-          items:
-          - content: Keyboard Shortcuts
-            url: '#'
-            urlType: fragment
-          - content: Importing and Exporting
-            url: '#'
-            urlType: fragment
-    - url: '#' 
+      url: '#'
       version: '1.0'
       displayVersion: '1.0'
       navigation:
