@@ -38,20 +38,24 @@ div.nav-container {
     color: black; 
     vertical-align: middle;
     padding-top: 0.2rem; 
-    padding-bottom: 0.2rem; 
+    padding-bottom: 0.2rem;
+
+    &:hover {
+      color: $mdc-theme-secondary;
+    }
 
     a{
       text-decoration: none; 
-      color: black; 
+      color: black;
+
+      &:hover {
+        @extend .nav-item:hover;
+      }
     }
 
 
     & .is-current-page {
       color: $mdc-theme-secondary; 
-    }
-
-    &:hover {
-      background-color: #EEEEEE;
     }
   }
 
@@ -72,15 +76,15 @@ div.nav-container {
 .nav-trees {
   max-width: 100%;
   margin: 0; 
-  margin-right: 2rem; 
+  margin-right: 2rem;
+  padding: 0.2rem 0;
 }
 
 // version select 
 .version-box {
   margin: 0; 
   float: right; 
-  display: inline-block; 
-  margin-top: 4px;
+  display: inline-block;
 
   span {
     color: $light-gray;
@@ -107,14 +111,14 @@ div.nav-container {
 
 
 .select-version {
-	display: block;
-	font-size: 0.6em;
-	color: $light-gray;
-	padding: 0.5vh 0.1vw;
-	box-sizing: border-box;
-	margin: 0;
-	border: 1px solid $light-gray;
-	border-radius: .5em;
+  display: block;
+  font-size: 0.6em;
+  color: $light-gray;
+  padding: 0.5vh 0.1vw;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid $light-gray;
+  border-radius: .5em;
   -moz-appearance: none;
 }
 
