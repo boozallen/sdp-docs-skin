@@ -18,8 +18,8 @@ div.nav-container {
 
   .material-icons.show-more {
     color: black; 
-    font-size: 1.2em; 
-    min-width: 1rem; 
+    font-size: 1.0rem;
+    min-width: 1.0rem;
     transition: all $expand-animation-time ease-in-out; 
     
     &:hover {
@@ -33,12 +33,20 @@ div.nav-container {
   }
 
   .nav-item {
-    font-size: 0.75vw; 
+    font-size: 0.75rem;
     max-width: 16rem; 
     color: black; 
     vertical-align: middle;
     padding-top: 0.2rem; 
     padding-bottom: 0.2rem;
+
+    /* Setup word wrapping. overflow-wrap and word-wrap are aliases but some
+       browsers support one and not the other. Similarly, webkit only respects
+       break-word for word-break. */
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
 
     &:hover {
       color: $mdc-theme-secondary;
@@ -67,9 +75,10 @@ div.nav-container {
 }
 
 .nav-children-panel {
-  padding-left: 0.5rem; 
-  max-height: 0;
-  overflow: hidden; 
+  display: block;
+  padding-left: 0.5rem;
+  overflow: auto;
+  min-width: 5rem;
   transition: max-height $expand-animation-time ease-out;
 }
 
@@ -88,9 +97,9 @@ div.nav-container {
 
   span {
     color: $light-gray;
-    padding-left: 1.2em; 
-    padding-top: -0.1em; 
-    font-size: 0.5vw; 
+    padding-left: 1.2rem;
+    padding-top: -0.1rem;
+    font-size: 0.75rem;
   }
 
   .single-version {
@@ -112,18 +121,18 @@ div.nav-container {
 
 .select-version {
   display: block;
-  font-size: 0.6em;
+  font-size: 0.65rem;
   color: $light-gray;
-  padding: 0.5vh 0.1vw;
+  padding: 0.1rem;
   box-sizing: border-box;
   margin: 0;
   border: 1px solid $light-gray;
-  border-radius: .5em;
+  border-radius: .5rem;
   -moz-appearance: none;
 }
 
 .select-version::-ms-expand {
-	display: none;
+  display: none;
 }
 
 .select-version:hover {
@@ -149,34 +158,17 @@ div.nav-container {
   display: none !important; 
 }
 
-
-// mobile view 
-@media screen and (max-width: 1024px) {
-  div.nav-container{ 
-    max-width: 0; 
-
-    .open { 
-      max-width: $nav-width; 
-    }
-
-    aside { 
-      width: 0; 
-    }
-  }
-}
-
-
 @media screen and (min-width: 1025px){
   div.nav-container {
-    min-width: $nav-width; 
+    min-width: $nav-width;
     aside {
       margin-top: 5rem;
       padding-left: 0.5rem;
       position: fixed;
-      top: 0; 
-      bottom: 0;  
+      top: 0;
+      bottom: 0;
       overflow-y: auto;
-      width: $nav-width; 
+      width: $nav-width;
     }
   }
 }

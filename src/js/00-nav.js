@@ -47,29 +47,13 @@
     x[i].addEventListener('click', function(event){
       var item = event.target
       var panel = item.parentElement.nextElementSibling
-      var height, itemHasChildren = false;
-      if(panel){
-        itemHasChildren = panel.classList.contains('nav-children-panel')
-      }
-      if(itemHasChildren){
-        height = panel.scrollHeight
-        var childrenPanels = panel.querySelectorAll('.nav-children-panel')
-        for(var j=0; j < childrenPanels.length; j++){
-            height = height + childrenPanels[j].scrollHeight
-        }
-      }
       if(item.classList.contains('expanded')){
         item.classList.remove('expanded')
-        if(itemHasChildren){
-          panel.style.maxHeight = null
-        }
+        panel.classList.add('hide')
       } else{
         item.classList.add('expanded')
-        if(itemHasChildren){
-          panel.style.maxHeight = height + 'px'
-        }
+        panel.classList.remove('hide')
       }
-
     })
   }
 
@@ -78,7 +62,11 @@
   mdc.iconButton.MDCIconButtonToggle.attachTo(navToggle)
   navToggle.addEventListener('click', function(){
     var navContainer = document.querySelector('div.nav-container')
-    var aside = document.querySelector('div.nav-container aside')
+    if(navContainer.classList.contains('hide')){
+      navContainer.classList.remove('hide')
+    } else{
+      navContainer.classList.add('hide')
+    }
   })
 
 })()
