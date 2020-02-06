@@ -80,13 +80,24 @@ div.nav-container {
   margin: 0; 
   float: right; 
   display: inline-block; 
-  margin-top: 4px; 
+  margin-top: 4px;
 
   span {
-    color: #aaa;
+    color: $light-gray;
     padding-left: 1.2em; 
     padding-top: -0.1em; 
     font-size: 0.5vw; 
+  }
+
+  .single-version {
+    background-color: $mdc-theme-background;
+    border-color: $mdc-theme-background;
+    color: $light-gray;
+  }
+
+  .single-version:hover {
+    border-color: $mdc-theme-background;
+    color: $light-gray;
   }
 
   &:hover span {
@@ -98,11 +109,11 @@ div.nav-container {
 .select-version {
 	display: block;
 	font-size: 0.6em;
-	color: #aaa;
+	color: $light-gray;
 	padding: 0.5vh 0.1vw;
 	box-sizing: border-box;
 	margin: 0;
-	border: 1px solid #aaa;
+	border: 1px solid $light-gray;
 	border-radius: .5em;
   -moz-appearance: none;
 }
@@ -117,12 +128,9 @@ div.nav-container {
 }
 
 .select-version:focus {
-	border-color: #aaa;
-	box-shadow: #aaa;
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
   color: $mdc-theme-secondary;
   border-color: $mdc-theme-secondary;
-	outline: none;
+  outline: none;
 }
 
 .select-version option {

@@ -35,7 +35,8 @@
 
     // Disable select if there is only one version
     if (s.options.length === 1) {
-      s.disabled = true
+      s.classList.add('single-version');
+      s.disabled = true;
     }
   }
 
