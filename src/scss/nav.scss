@@ -15,6 +15,7 @@ $expand-animation-time: 0.3s;
 //common 
 div.nav-container {
   @include mdc-elevation(4);
+  box-shadow: none;
 
   .material-icons.show-more {
     color: black; 

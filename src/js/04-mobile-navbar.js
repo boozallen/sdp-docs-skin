@@ -19,12 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-// Expand navbar if window is resized from mobile to desktop
 window.addEventListener('resize', function () {
+  // Unhide main content
+  var mainContainer = document.querySelector('main')
+  if (mainContainer.classList.contains('hide')) {
+    mainContainer.classList.remove('hide')
+  }
+
+  // Expand navbar if window is resized from mobile to desktop
   var navContainer = document.querySelector('div.nav-container')
   if (window.innerWidth > 1024) {
     if (navContainer.classList.contains('hide')) {
       navContainer.classList.remove('hide')
+    }
+  }
+
+  // Hide navbar if window is resized from desktop to mobile
+  if (window.innerWidth < 1025) {
+    if (!navContainer.classList.contains('hide')) {
+      navContainer.classList.add('hide')
     }
   }
 });

@@ -61,10 +61,15 @@
   var navToggle = document.getElementById('toolbar-nav-toggle')
   mdc.iconButton.MDCIconButtonToggle.attachTo(navToggle)
   navToggle.addEventListener('click', function(){
+    // Toggle navigation and main content together
+    var mainContainer = document.querySelector('main')
     var navContainer = document.querySelector('div.nav-container')
     if(navContainer.classList.contains('hide')){
+      mainContainer.classList.add('hide')
       navContainer.classList.remove('hide')
+
     } else{
+      mainContainer.classList.remove('hide')
       navContainer.classList.add('hide')
     }
   })
