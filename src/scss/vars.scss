@@ -115,7 +115,7 @@
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
-  --body-top: var(--navbar-height);
+  --body-top: 0;
   --body-min-height: calc(100vh - var(--body-top));
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
