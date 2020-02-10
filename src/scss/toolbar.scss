@@ -14,7 +14,6 @@
   position: sticky;
   top: var(--navbar-height);
   z-index: var(--z-index-toolbar);
-  display: none; 
   width: 100%; 
   flex: left; 
 }
@@ -36,6 +35,6 @@
 }
 
 #toolbar-nav-toggle {
-  @include mdc-icon-button-ink-color($mdc-theme-secondary)
-  @include mdc-icon-button-density(-3)
+  @include mdc-icon-button-ink-color($mdc-theme-secondary);
+  @include mdc-icon-button-density(-3);
 }
