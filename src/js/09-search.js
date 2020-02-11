@@ -31,8 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
     } else{
       searchResult.classList.add('hide')
       mainContainer.classList.remove('hide')
-      navContainer.classList.remove('hide')
-      toolbarContainer.classList.remove('hide')
+
+      // Toolbar should stay hidden on desktop and navbar should stay hidden on mobile.
+      if (window.innerWidth > 1024) {
+        navContainer.classList.remove('hide')
+      } else {
+        toolbarContainer.classList.remove('hide')
+      }
     }
 
     var regularTopBar = document.querySelector('.mdc-top-app-bar__row')
