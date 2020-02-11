@@ -1,10 +1,93 @@
+document.addEventListener('DOMContentLoaded', function () {
+  var searchButton = document.querySelector('.mdc-icon-button.search')
+  var searchCancelButton = document.querySelector('.mdc-icon-button.search-arrow-back')
+  var searchClearButton = document.querySelector('.mdc-icon-button.search-clear-query')
+
+  function clearSearch() {
+    var searchInput = document.getElementById('search-input')
+    searchInput.value = '';
+    searchInput.dispatchEvent(new KeyboardEvent('keydown')); // trigger rerender of results
+  }
+
+  function enterOrSpacebarPressed(e) {
+    // Need both, 'keyCode' and 'which' to work in all browsers.
+    var code = e.keyCode || e.which;
+    var enterKey = 13;
+    var spaceKey = 32;
+
+    return (code === enterKey || code === spaceKey);
+  }
+
+  function toggleSearch() {
+    var mainContainer = document.querySelector('main')
+    var navContainer = document.querySelector('div.nav-container')
+    var searchResult = document.querySelector('.search-result-dropdown-menu')
+    var toolbarContainer = document.querySelector('.toolbar')
+    if(searchResult.classList.contains('hide')){
+      searchResult.classList.remove('hide')
+      mainContainer.classList.add('hide')
+      navContainer.classList.add('hide')
+      toolbarContainer.classList.add('hide')
+    } else{
+      searchResult.classList.add('hide')
+      mainContainer.classList.remove('hide')
+      navContainer.classList.remove('hide')
+      toolbarContainer.classList.remove('hide')
+    }
+
+    var regularTopBar = document.querySelector('.mdc-top-app-bar__row')
+    var searchTopBar = document.querySelector('.mdc-top-app-bar__row.sdp-top-app-bar__search')
+    if(regularTopBar.classList.contains('hide')){
+      regularTopBar.classList.remove('hide')
+      searchTopBar.classList.add('hide')
+    } else{
+      regularTopBar.classList.add('hide')
+      searchTopBar.classList.remove('hide')
+    }
+  }
+
+  // Add event listeners to search icon
+  searchButton.addEventListener('click', toggleSearch)
+  searchButton.addEventListener('keypress', function (e) {
+    if (enterOrSpacebarPressed(e)) {
+      toggleSearch()
+    }
+  })
+  if ('ontouchstart' in window) {
+    searchButton.addEventListener('ontouchstart', toggleSearch)
+  }
+
+  // Add event listeners to search back/cancel icon
+  searchCancelButton.addEventListener('click', toggleSearch)
+  searchCancelButton.addEventListener('keypress', function (e) {
+    if (enterOrSpacebarPressed(e)) {
+      toggleSearch()
+    }
+  })
+  if ('ontouchstart' in window) {
+    searchCancelButton.addEventListener('ontouchstart', toggleSearch)
+  }
+
+  // Add event listeners to clear search button
+  searchClearButton.addEventListener('click', clearSearch)
+  searchClearButton.addEventListener('keypress', function (e) {
+    if (enterOrSpacebarPressed(e)) {
+      clearSearch()
+    }
+  })
+  if ('ontouchstart' in window) {
+    searchClearButton.addEventListener('ontouchstart', clearSearch)
+  }
+});
+
+
 /* eslint-env browser */
 window.antoraLunr = (function (lunr) {
   var searchInput = document.getElementById('search-input')
   var searchResult = document.createElement('div')
   var body = document.querySelector('.body')
   searchResult.classList.add('search-result-dropdown-menu')
-  //searchInput.parentNode.appendChild(searchResult)
+  searchResult.classList.add('hide')
   body.insertBefore(searchResult, body.firstChild)
 
   function highlightText (doc, position) {

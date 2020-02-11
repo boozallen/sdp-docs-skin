@@ -7,13 +7,21 @@
 
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
         <i class="material-icons mdc-icon-button search" tabindex="0" role="button">search</i>
-        <div class="mdc-text-field search">
-          <input type="text" id="search-input" class="mdc-text-field__input search">
-          <label class="mdc-floating-label mdc-floating-label--float-above" for="search-input">
-            Search the docs
-          </label>
-          <div class="mdc-line-ripple"></div>
-        </div>
+    </section>
+  </div>
+
+  <div class="mdc-top-app-bar__row sdp-top-app-bar__search mdc-drawer-app-content hide">
+    <section class="mdc-top-app-bar__section">
+      <i class="material-icons mdc-icon-button search-arrow-back" tabindex="0" role="button">arrow_back</i>
+
+      <div class="mdc-text-field search expanded">
+        <input type="text" id="search-input" class="mdc-text-field__input search">
+        <label class="mdc-floating-label mdc-floating-label--float-above" for="search-input">
+          Search the docs
+        </label>
+      </div>
+
+      <i class="material-icons mdc-icon-button search-clear-query" role="button" tabindex="0">close</i>
     </section>
   </div>
 </header>

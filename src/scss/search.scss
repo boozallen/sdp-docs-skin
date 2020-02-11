@@ -1,6 +1,10 @@
 @import './common'; 
 @import "@material/elevation/mdc-elevation";
 
+.mdc-text-field.search {
+  margin-right: 0;
+}
+
 .navbar-brand .navbar-item + .navbar-item {
   flex-grow: 1;
   justify-content: flex-end;
@@ -20,43 +24,27 @@
   color: #333;
   font-family: inherit;
   font-size: 0.95rem;
-  width: 150px;
+  max-width: 100vw;
   border: 1px solid #dbdbdb;
   border-radius: 0.1em;
   line-height: 1.5;
   padding: 0 0.25em;
 }
 
-@media screen and (min-width: 769px) {
-  #search-input {
-    width: 200px;
-  }
-}
-
 .search-result-dropdown-menu {
   @include mdc-elevation(4);
 
-  position: absolute;
   z-index: 100000;
   display: block;
-  right: 0;
-  left: inherit;
   top: 50px;
   border-radius: 4px;
-  margin: 6px 0 0;
+  margin: 0;
   padding: 0;
   text-align: left;
-  height: auto;
-  background: transparent;
   border: none;
-  max-width: 600px;
-  min-width: 500px;
+  height: 100vh;
+  width: 100vw;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-  &:not(:empty){
-    border: 1px solid $mdc-theme-secondary;
-  }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -71,13 +59,11 @@
 }
 
 .search-result-dataset {
-  position: relative;
   border: 1px solid #d9d9d9;
   background: #fff;
   border-radius: 4px;
-  overflow: auto;
+  overflow-wrap: break-word;
   padding: 0 8px 8px;
-  max-height: calc(100vh - 5.25rem);
   color: #333;
 }
 

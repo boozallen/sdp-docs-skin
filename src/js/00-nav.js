@@ -4,19 +4,6 @@
   //header 
   mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'))
 
-  // search buttons
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field.search'))
-  var searchIcon = document.querySelector('.mdc-icon-button.search')
-  mdc.iconButton.MDCIconButtonToggle.attachTo(searchIcon)
-  searchIcon.addEventListener('click', function(){
-    var searchTextBox = this.nextElementSibling
-    if(searchTextBox.classList.contains('expanded')){
-      searchTextBox.classList.remove('expanded')
-    } else {
-      searchTextBox.classList.add('expanded')
-    }
-  })
-
   // nav 
   /// version select box
   var select = document.querySelectorAll('.select-version')

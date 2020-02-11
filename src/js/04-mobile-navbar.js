@@ -20,17 +20,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 window.addEventListener('resize', function () {
-  // Unhide main content
-  var mainContainer = document.querySelector('main')
-  if (mainContainer.classList.contains('hide')) {
-    mainContainer.classList.remove('hide')
-  }
+  // Only expand/unhide elements on resize if search isn't open
+  var searchTopBar = document.querySelector('.mdc-top-app-bar__row.sdp-top-app-bar__search')
+  if (searchTopBar.classList.contains('hide')) {
+    // Unhide main content
+    var mainContainer = document.querySelector('main')
+    if (mainContainer.classList.contains('hide')) {
+      mainContainer.classList.remove('hide')
+    }
 
-  // Expand navbar if window is resized from mobile to desktop
-  var navContainer = document.querySelector('div.nav-container')
-  if (window.innerWidth > 1024) {
-    if (navContainer.classList.contains('hide')) {
-      navContainer.classList.remove('hide')
+    // Expand navbar if window is resized from mobile to desktop
+    var navContainer = document.querySelector('div.nav-container')
+    if (window.innerWidth > 1024) {
+      if (navContainer.classList.contains('hide')) {
+        navContainer.classList.remove('hide')
+      }
     }
   }
 
