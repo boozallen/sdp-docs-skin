@@ -1,45 +1,25 @@
-{{#if navigation.length}}
-  {{#each navigation}}
-    {{#if ./content}}
-      {{#if ./url}}
-        {{~#if (eq ./urlType 'internal')}}
-          <div class="nav-item">
-            {{#if ./items.length}}
-              <i class="material-icons show-more" aria-hidden="true">chevron_right</i>
-            {{/if}}
-            <a  class="{{#unless ./items.length}}spacer{{/unless}}{{#if (eq @root.page.url ./url)}} is-current-page{{/if}}" href="{{relativize ./url}}">
-              {{{./content}}}
-            </a>
-          </div>
-        {{~else}}
-          <div class="nav-item">
-            {{#if ./items.length}}
-              <i class="material-icons show-more" aria-hidden="true">chevron_right</i>
-            {{/if}}
-            <a class="{{#unless ./items.length}}spacer{{/unless}}{{#if (eq @root.page.url ./url)}} is-current-page{{/if}}" href="{{{./url}}}">
-              {{{./content}}}
-            </a>
-          </div>
-        {{~/if}}
-      {{else}}
-        <div class="nav-item">
-          {{#if ./items.length}}
-            <i class="material-icons show-more" aria-hidden="true">chevron_right</i>
-          {{/if}}
-          <span class="{{#unless ./items.length}}spacer{{/unless}}{{#if (eq @root.page.url ./url)}} is-current-page{{/if}}">
-            {{{./content}}}
-          </span>
-        </div>
-      {{/if}}
-    {{/if}}
-    {{#if ./items.length}}
-      {{#if ./root}}
-          {{> nav-tree navigation=./items}}
-      {{else}}
+{{#if navigation.length}} {{!-- only do stuff if there are nav items to show --}}
+  {{#each navigation}} {{!-- iterate over nav items --}}
+    {{#if ./content}} {{!-- if there's content, then show it --}}
+      <div class="nav-item">
+        {{#if ./items.length}}<i class="material-icons show-more" aria-hidden="true">chevron_right</i>{{/if}}
+        {{#if ./url}} {{!-- url for nav-item, so make it a link --}}
+          {{~#if (eq ./urlType 'internal')}} {{!-- link is internal, relativize url --}}
+            <a  class="{{#unless ./items.length}}spacer{{/unless}}{{#if (eq @root.page.url ./url)}} is-current-page{{/if}}" href="{{relativize ./url}}">{{{./content}}}</a>
+          {{~else}} {{!-- just send to url --}}
+            <a class="{{#unless ./items.length}}spacer{{/unless}}{{#if (eq @root.page.url ./url)}} is-current-page{{/if}}" href="{{{./url}}}">{{{./content}}}</a>
+          {{~/if}}
+        {{else}} {{!-- no url for nav-item, so just display as span --}}
+          <span class="{{#unless ./items.length}}spacer{{/unless}}{{#if (eq @root.page.url ./url)}} is-current-page{{/if}}">{{{./content}}}</span>
+        {{/if}}
+      </div>
+      {{#if ./items.length}} {{!-- nav item has sub nav items --}}
         <div class="nav-children-panel hide">
           {{> nav-tree navigation=./items}}
         </div>
       {{/if}}
+    {{else}} {{!-- no content, so just keep going --}}
+      {{> nav-tree navigation=./items}}
     {{/if}}
   {{/each}}
 {{/if}}

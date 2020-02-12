@@ -1,5 +1,9 @@
 {{#if page.navigation}}
   {{#each site.components}}
+    <script>
+      console.log("component - {{this.title}}: ", {{{json this}}})
+      window.{{{this.name}}} = {{{json this}}}
+    </script>
     <div class="nav-trees">
       <div class="version-box">
         <select data-component="{{this.name}}" class="select-version">
