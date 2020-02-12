@@ -11,6 +11,7 @@ site:
       url: '#'
       version: '1.0'
       displayVersion: '1.0'
+      title: Jenkins Templating Engine
       navigation:
       - root: true
         content: Jenkins Templating Engine
@@ -48,6 +49,7 @@ site:
       url: /xyz/6.0/index.html
       version: '6.0'
       displayVersion: '6.0'
+      title: Pipeline Libraries
       navigation:
       - root: true
         content: Pipeline Libraries
@@ -79,6 +81,7 @@ site:
       url: '#' 
       version: '5.2'
       displayVersion: '5.2'
+      title: Pipeline Libraries
       navigation:
       - root: true
         content: Pipeline Libraries
@@ -109,6 +112,7 @@ site:
     - url: '#' 
       version: '5.1'
       displayVersion: '5.1'
+      title: Pipeline Libraries
       navigation:
       - root: true
         content: Pipeline Libraries
@@ -139,6 +143,7 @@ site:
     - url: '#' 
       version: '5.0'
       displayVersion: '5.0'
+      title: Pipeline Libraries
       navigation:
       - root: true
         content: Pipeline Libraries
@@ -175,6 +180,7 @@ site:
       url: '#' 
       version: '2.2'
       displayVersion: '2.2'
+      title: Reference Architectures
       navigation:
       - root: true
         content: Reference Architectures
@@ -205,6 +211,7 @@ site:
     - url: '#' 
       version: '2.1'
       displayVersion: '2.1'
+      title: Reference Architectures
       navigation:
       - root: true
         content: Reference Architectures
@@ -235,6 +242,7 @@ site:
     - url: '#' 
       version: '2.0'
       displayVersion: '2.0'
+      title: Reference Architectures
       navigation:
       - root: true
         content: Reference Architectures

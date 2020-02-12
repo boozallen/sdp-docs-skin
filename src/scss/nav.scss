@@ -14,7 +14,6 @@ $expand-animation-time: 0.3s;
 
 //common 
 div.nav-container {
-  @include mdc-elevation(4);
   box-shadow: none;
 
   .material-icons.show-more {
@@ -41,6 +40,8 @@ div.nav-container {
     padding-top: 0.2rem; 
     padding-bottom: 0.2rem;
 
+    display: table; 
+
     /* Setup word wrapping. overflow-wrap and word-wrap are aliases but some
        browsers support one and not the other. Similarly, webkit only respects
        break-word for word-break. */
@@ -56,10 +57,17 @@ div.nav-container {
     a{
       text-decoration: none; 
       color: black;
+      display: table-cell; 
+      vertical-align: middle;
 
       &:hover {
         @extend .nav-item:hover;
       }
+    }
+
+    span {
+      display: table-cell; 
+      vertical-align: middle;
     }
 
 
@@ -95,6 +103,7 @@ div.nav-container {
   margin: 0; 
   float: right; 
   display: inline-block;
+  margin-top: 0.1rem;
 
   span {
     color: $light-gray;
@@ -163,7 +172,8 @@ div.nav-container {
   div.nav-container {
     min-width: $nav-width;
     aside {
-      margin-top: 5rem;
+      @include mdc-elevation(4);
+      padding-top: 5rem;
       padding-left: 0.5rem;
       position: fixed;
       top: 0;

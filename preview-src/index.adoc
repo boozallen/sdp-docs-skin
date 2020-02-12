@@ -1,36 +1,39 @@
-= Hardware and Software Requirements
-Author Name
-:idprefix:
-:idseparator: -
-:!example-caption:
-:!table-caption:
+= JTE
 
-image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
-Platonem complectitur mediocritatem ea eos.
-Ei nonumy deseruisse ius.
-Mel id omnes verear.
-Vis no velit audiam, sonet <<dependencies,praesent>> eum ne.
-*Prompta eripuit* nec ad.
-Integer diam enim, dignissim eget eros et, ultricies mattis odio.
-Vestibulum consectetur nec urna a luctus.
-Quisque pharetra tristique arcu fringilla dapibus.
-Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
+some content
+// = Hardware and Software Requirements
+// Author Name
+// :idprefix:
+// :idseparator: -
+// :!example-caption:
+// :!table-caption:
 
-== Cu solet
+// image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
+// Platonem complectitur mediocritatem ea eos.
+// Ei nonumy deseruisse ius.
+// Mel id omnes verear.
+// Vis no velit audiam, sonet <<dependencies,praesent>> eum ne.
+// *Prompta eripuit* nec ad.
+// Integer diam enim, dignissim eget eros et, ultricies mattis odio.
+// Vestibulum consectetur nec urna a luctus.
+// Quisque pharetra tristique arcu fringilla dapibus.
+// Curabitur ut massa aliquam, cursus enim et, accumsan lectus.
 
-Nominavi luptatum eos, an vim hinc philosophia intellegebat.
-Lorem `expetenda` pertinacia et nec, [.underline]#wisi# illud [.line-through]#sonet# qui ea.
-Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
-Eu mea inani iriure.
+// == Cu solet
 
-[source, groovy]
-----
-if (a == b){
-  things.each{ thing -> 
-    println thing
-  }
-}
-----
+// Nominavi luptatum eos, an vim hinc philosophia intellegebat.
+// Lorem `expetenda` pertinacia et nec, [.underline]#wisi# illud [.line-through]#sonet# qui ea.
+// Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
+// Eu mea inani iriure.
+
+// [source, groovy]
+// ----
+// if (a == b){
+//   things.each{ thing -> 
+//     println thing
+//   }
+// }
+// ----
 
 // .Example paragraph syntax
 // [source,asciidoc]
@@ -50,10 +53,10 @@ if (a == b){
 // ----
 // vfs
 //   .src('js/vendor/*.js', { cwd: 'src', cwdbase: true, read: false })
-//   .pipe(tap((file) => { // <1>
+//   .pipe(tap((file) => { <1>
 //     file.contents = browserify(file.relative, { basedir: 'src', detectGlobals: false }).bundle()
 //   }))
-//   .pipe(buffer()) // <2>
+//   .pipe(buffer()) <2>
 //   .pipe(uglify())
 //   .pipe(gulp.dest('build'))
 // ----
@@ -190,9 +193,9 @@ if (a == b){
 // ====
 // If you installed the CLI and the default site generator globally, you can upgrade both of them with the same command.
 
-//  $ npm i -g @antora/cli @antora/site-generator-default
+// $ npm i -g @antora/cli @antora/site-generator-default
 // ====
 
 
 
-That's all, folks!
+// That's all, folks!
