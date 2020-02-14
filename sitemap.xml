@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
-<loc>http://localhost:5000/sitemap-component-a.xml</loc>
+<loc>http://boozallen.github.io/sdp-docs-skin/sitemap-deployment-guides.xml</loc>
 </sitemap>
 <sitemap>
-<loc>http://localhost:5000/sitemap-component-b.xml</loc>
+<loc>http://boozallen.github.io/sdp-docs-skin/sitemap-jte.xml</loc>
+</sitemap>
+<sitemap>
+<loc>http://boozallen.github.io/sdp-docs-skin/sitemap-learning-labs.xml</loc>
+</sitemap>
+<sitemap>
+<loc>http://boozallen.github.io/sdp-docs-skin/sitemap-overview.xml</loc>
+</sitemap>
+<sitemap>
+<loc>http://boozallen.github.io/sdp-docs-skin/sitemap-sdp-libraries.xml</loc>
 </sitemap>
 </sitemapindex>
