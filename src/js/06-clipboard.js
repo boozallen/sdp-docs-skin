@@ -7,15 +7,16 @@
     copyIcon.innerText = 'file_copy'
     for (var i = 0; i < codeBlocks.length; i++) {
       var icon = copyIcon.cloneNode(true)
-      icon.addEventListener('mouseover', function (event) {
-        console.log(event.target)
-      })
       codeBlocks[i].insertBefore(icon, codeBlocks[i].childNodes[0])
     }
-  
+ 
     /*global ClipboardJS*/
     var clipboard = new ClipboardJS('.material-icons.codeCopyButton', {
-      text: function (target) { return target.parentNode.innerText },
+      text: function (target) { 
+        var lines = target.parentNode.innerText.split("\n")
+        lines.splice(0,1)
+        return lines.join("\n") 
+      },
     })
   
     clipboard.on('success', function (e) {

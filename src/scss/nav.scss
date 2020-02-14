@@ -112,15 +112,21 @@ div.nav-container {
     font-size: 0.75rem;
   }
 
-  .single-version {
-    background-color: $mdc-theme-background;
-    border-color: $mdc-theme-background;
-    color: $light-gray;
-  }
+  // .single-version {
+  //   background-color: $mdc-theme-background;
+  //   border-color: $mdc-theme-background;
+  //   color: $light-gray;
+  // }
 
-  .single-version:hover {
-    border-color: $mdc-theme-background;
-    color: $light-gray;
+  // .single-version:hover {
+  //   border-color: $mdc-theme-background;
+  //   color: $light-gray;
+  // }
+
+  .single-version {
+    background-color: white;
+    border-color: white;
+    color: white;
   }
 
   &:hover span {

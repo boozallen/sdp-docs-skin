@@ -12,8 +12,8 @@
     s.addEventListener('change', function(event){
       var component = this.getAttribute('data-component')
       var version = this.options[this.selectedIndex].value
-      var showSelector = 'div[data-component="' + component + '"][data-version="' + version + '"]'
-      var hideSelector = 'div[data-component="' + component + '"]:not(.hide)'
+      var showSelector = '.nav-container div[data-component="' + component + '"][data-version="' + version + '"]'
+      var hideSelector = '.nav-container div[data-component="' + component + '"]:not(.hide)'
       var navShow = document.querySelector(showSelector)
       var navHide = document.querySelector(hideSelector)
       navShow.classList.remove('hide')
