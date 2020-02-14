@@ -9,7 +9,7 @@
 @import "@material/menu/mdc-menu";
 @import "@material/select/mdc-select";
 
-$nav-width: 15vw; 
+$nav-width: 18vw; 
 $expand-animation-time: 0.3s; 
 
 //common 
@@ -103,7 +103,7 @@ div.nav-container {
   margin: 0; 
   float: right; 
   display: inline-block;
-  margin-top: 0.1rem;
+  margin-top: 0.3rem;
 
   span {
     color: $light-gray;
@@ -129,9 +129,9 @@ div.nav-container {
     color: white;
   }
 
-  &:hover span {
-    color: $mdc-theme-secondary;
-  }
+  // &:hover span {
+  //   color: $mdc-theme-secondary;
+  // }
 }
 
 
