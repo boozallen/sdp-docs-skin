@@ -1,6 +1,20 @@
 ;(function () {
   'use strict'
 
+  // expand current page nav 
+  var currentPageItem = document.querySelector('.is-current-page').parentNode
+  expandParents(currentPageItem)
+  function expandParents(element) {
+    var panel = element.parentNode
+    if(!panel.matches(".nav-children-panel")){
+        return 
+    }
+    var parentHeader = panel.previousElementSibling
+    panel.classList.remove('hide')
+    parentHeader.querySelector('.material-icons').classList.add('expanded')
+    expandParents(parentHeader)
+  }  
+
   //header 
   mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'))
 
