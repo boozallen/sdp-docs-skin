@@ -29,7 +29,7 @@ const lib = require('./gulp.d/tasks/build-preview-pages.js')
 // clean up build dir and preview site
 async function clean(){
     del.sync([ bundleDir, previewDir ]);
-    await Promise.resolve();
+    return Promise.resolve();
 }
 
 // compile scss into css
@@ -45,7 +45,7 @@ async function css() {
         .pipe(dest(`${destDir}/css`))
         .pipe(browserSync.stream());
     
-    await Promise.resolve();
+    return Promise.resolve();
 }
 
 // minify JS 
@@ -56,17 +56,17 @@ async function js() {
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(dest(`${destDir}/js`))
-    await Promise.resolve();
+    return Promise.resolve();
 }
 
 async function helpers(){
     src(`${srcDir}/helpers/**/*.js`).pipe(dest(`${destDir}/helpers`))
-    await Promise.resolve();
+    return Promise.resolve();
 }
 
 async function handlebars(){
     src(`${srcDir}/{layouts,partials}/**/*.hbs`).pipe(dest(`${destDir}`))
-    await Promise.resolve();
+    return Promise.resolve();
 }
 
 async function img() {
@@ -77,7 +77,7 @@ async function img() {
           imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
       ].reduce((accum, it) => it ? accum.concat(it) : accum, [])))
       .pipe(dest(`${destDir}/img`));
-    await Promise.resolve();
+    return Promise.resolve();
 }
 
 async function buildPreviewPages() {
@@ -98,7 +98,7 @@ async function pack(){
     .pipe(zip('ui-bundle.zip'))
     .pipe(dest(bundleDir))
 
-    await Promise.resolve();
+    return Promise.resolve();
 }
 
 function reload(){

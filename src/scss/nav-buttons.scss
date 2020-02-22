@@ -1,0 +1,60 @@
+@import "./common";
+
+.nav-buttons {
+    margin: auto; 
+    height: 5rem;
+    width: 95%;
+
+    a{
+        border: 1px solid $mdc-theme-primary;
+        color: $mdc-theme-primary!important; 
+        border-radius: 5px;
+        font-size: 0.75rem; 
+        line-height: 1.2em;
+        padding: 10px;
+        text-decoration: none!important;
+        text-transform: uppercase;
+        transition: all .15s ease-in-out;
+        margin-top: 3rem;
+        display: table; 
+
+        &:hover{
+            @include mdc-elevation(4);
+            border: 1px solid $mdc-theme-secondary; 
+            color: $mdc-theme-secondary!important; 
+        }
+        
+        .title {
+            display: table-cell; 
+            vertical-align: middle;
+            text-align: center; 
+        }
+
+        .arrow {
+            display: table-cell; 
+            vertical-align: middle;
+        }
+
+        &.previous{
+            float: left;
+            .arrow {
+                float: left; 
+                padding-right: 10px; 
+            }
+            .title{
+                padding-right: 10px; 
+            }
+        }
+
+        &.next{
+            float: right;
+            .arrow {
+                float: right; 
+                padding-left: 10px; 
+            }
+            .title{
+                padding-left: 10px; 
+            }
+        }
+    }
+}

@@ -412,7 +412,6 @@ page:
         - content: Importing and Exporting
           url: '#'
           urlType: fragment
-
   navigation:
   - root: true
     content: Pipeline Libraries
@@ -440,3 +439,11 @@ page:
       - content: Importing and Exporting
         url: '#'
         urlType: fragment
+  previous: 
+    content: Stages
+    url: /jte/1.5.2/primitives/stages.html
+    urlType: internal 
+  next: 
+    content: Default Step Implementation 
+    url: "/jte/1.5.2/primitives/default_step_implementation.html" 
+    urlType: internal
