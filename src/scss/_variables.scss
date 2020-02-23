@@ -1,11 +1,18 @@
 
 
 //$mdc-theme-primary: #637D93;// jte purple: #563A89; 
-$mdc-theme-primary: #464646; 
+
+// blue-aqua
+// $mdc-theme-primary: rgb(0,51,102); 
+// $mdc-theme-secondary: rgb(187, 41, 187);
+// orange - teal 
+$mdc-theme-primary: rgb(0,102,102);
+$mdc-theme-secondary: rgb(255,153,0);
+// purple - red 
+// $mdc-theme-primary: rgb(0,0,102);
+// $mdc-theme-secondary: rgb(255,0,0);
 $mdc-theme-on-primary: white;
-$mdc-theme-secondary: #25BBBF; 
 $mdc-theme-secondary-highlight: rgba(37, 186, 191, 0.3);
-// $mdc-theme-secondary: #B63F60; 
 $mdc-theme-on-secondary: white;
 $mdc-theme-error: white;
 $mdc-theme-on-error: white;
@@ -13,4 +20,4 @@ $mdc-theme-surface: white;
 $mdc-theme-on-surface: white; 
 $mdc-theme-background: white;
 
-$light-gray: #aaa;
+$light-gray: rgb(153,153,153);

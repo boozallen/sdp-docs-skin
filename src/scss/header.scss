@@ -1,6 +1,13 @@
 //////// CUSTOM 
 @import "./common";
 
+#bah-logo {
+  fill: white; 
+  width: 15.27778rem;
+  height: 1.83333rem;
+  margin-left: 2rem; 
+}
+
 // top app bar 
 .mdc-top-app-bar {
   @include mdc-elevation(2);
