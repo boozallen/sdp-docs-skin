@@ -4,22 +4,6 @@
 </script>
 
 <div class="nav-buttons">
-    {{#if page.next}}
-        <a class="next" href="
-            {{~#if (eq page.next.urlType 'internal')}}
-                {{{relativize @root.page.url page.next.url}}}
-            {{~else}}
-                {{{page.next.url}}}
-            {{~/if}}"
-        >
-            <div class="title">
-                {{page.next.content}}
-            </div>
-            <div class="arrow">
-                <i class="material-icons show-more" aria-hidden="true">arrow_forward</i>
-            </div>
-        </a>
-    {{/if}}
     {{#if page.previous}}
         <a class="previous" href="
             {{~#if (eq page.previous.urlType 'internal')}}
@@ -33,6 +17,22 @@
             </div>
              <div class="title">
                 {{page.previous.content}}
+            </div>
+        </a>
+    {{/if}}
+    {{#if page.next}}
+        <a class="next" href="
+            {{~#if (eq page.next.urlType 'internal')}}
+                {{{relativize @root.page.url page.next.url}}}
+            {{~else}}
+                {{{page.next.url}}}
+            {{~/if}}"
+        >
+            <div class="title">
+                {{page.next.content}}
+            </div>
+            <div class="arrow">
+                <i class="material-icons show-more" aria-hidden="true">arrow_forward</i>
             </div>
         </a>
     {{/if}}

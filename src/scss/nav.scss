@@ -44,8 +44,12 @@ div.nav-container {
     word-break: break-word;
     word-wrap: break-word;
 
-    &:hover {
+    &.is-link:hover {
       color: $mdc-theme-secondary;
+    }
+
+    &:not(.is-link):hover{
+      cursor: pointer; 
     }
 
     a{
@@ -55,7 +59,7 @@ div.nav-container {
       vertical-align: middle;
 
       &:hover {
-        @extend .nav-item:hover;
+        @extend .nav-item.is-link:hover;
       }
     }
 

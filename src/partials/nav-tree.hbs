@@ -1,7 +1,7 @@
 {{#if navigation.length}} {{!-- only do stuff if there are nav items to show --}}
   {{#each navigation}} {{!-- iterate over nav items --}}
     {{#if ./content}} {{!-- if there's content, then show it --}}
-      <div class="nav-item">
+      <div class="nav-item {{#if ./url}}is-link{{/if}}">
         {{#if ./items.length}}<i class="material-icons show-more" aria-hidden="true">chevron_right</i>{{/if}}
         {{#if ./url}} {{!-- url for nav-item, so make it a link --}}
           {{~#if (eq ./urlType 'internal')}} {{!-- link is internal, relativize url --}}

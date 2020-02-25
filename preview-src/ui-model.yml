@@ -440,10 +440,10 @@ page:
         url: '#'
         urlType: fragment
   previous: 
-    content: Stages
+    content: "Section 1.1: This is a really long previous link"
     url: /jte/1.5.2/primitives/stages.html
     urlType: internal 
   next: 
-    content: Default Step Implementation 
+    content: "Section 2.1: This is also a really long previous link"
     url: "/jte/1.5.2/primitives/default_step_implementation.html" 
     urlType: internal

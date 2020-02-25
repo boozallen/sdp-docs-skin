@@ -1,9 +1,14 @@
 @import "./common";
 
 .nav-buttons {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+
     margin: auto; 
-    height: 5rem;
-    width: 95%;
+    padding-bottom: 3rem; 
+    padding-top: 3rem; 
 
     a{
         border: 1px solid $mdc-theme-primary;
@@ -15,8 +20,8 @@
         text-decoration: none!important;
         text-transform: uppercase;
         transition: all .15s ease-in-out;
-        margin-top: 3rem;
         display: table; 
+        margin-top: 1rem; 
 
         &:hover{
             @include mdc-elevation(4);
@@ -36,7 +41,6 @@
         }
 
         &.previous{
-            float: left;
             .arrow {
                 float: left; 
                 padding-right: 10px; 
@@ -47,7 +51,6 @@
         }
 
         &.next{
-            float: right;
             .arrow {
                 float: right; 
                 padding-left: 10px; 

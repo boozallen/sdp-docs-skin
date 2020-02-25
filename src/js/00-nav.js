@@ -76,11 +76,12 @@
 
 
   /// nav-tree
-  var x = document.querySelectorAll('.nav-item .material-icons'); 
+  var x = document.querySelectorAll('.nav-item:not(.is-link), .nav-item.is-link .material-icons'); 
   for(var i = 0; i < x.length; i++){
     mdc.ripple.MDCRipple.attachTo(x[i])
     x[i].addEventListener('click', function(event){
-      var item = event.target
+      var target = event.target
+      var item = target.matches('span') ? target.previousElementSibling : target
       var panel = item.parentElement.nextElementSibling
       if(item.classList.contains('expanded')){
         item.classList.remove('expanded')

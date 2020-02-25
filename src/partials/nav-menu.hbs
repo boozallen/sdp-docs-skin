@@ -12,7 +12,7 @@
       </div>
       {{#each this.versions}}
         <div data-component="{{../name}}" data-version="{{this.version}}" class="{{#unless (eq ./version ../latestVersion.version)}}hide{{/unless}}">
-          <div class="nav-item">
+          <div class="nav-item is-link">
             {{#if ./navigation.length}}
               <i class="material-icons show-more" aria-hidden="true">chevron_right</i>
             {{/if}}
