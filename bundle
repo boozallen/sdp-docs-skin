@@ -1,0 +1,15 @@
+#!/bin/bash
+DEST=public/_
+FILE=ui-bundle.zip
+
+# cleanup
+rm -rf "$FILE" "$DEST"
+
+# bundle
+npm run gulp:bundle
+
+# zip
+cd "$DEST"
+zip -r -X "$FILE" *
+cd -
+mv "$DEST/$FILE" "./$FILE"
