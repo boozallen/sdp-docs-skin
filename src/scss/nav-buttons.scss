@@ -1,63 +1,63 @@
-@import "./common";
+@import './common';
 
 .nav-buttons {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap; 
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
-    margin: auto; 
-    padding-bottom: 3rem; 
-    padding-top: 3rem; 
+  margin: auto;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 
-    a{
-        border: 1px solid $mdc-theme-primary;
-        color: $mdc-theme-primary!important; 
-        border-radius: 5px;
-        font-size: 0.75rem; 
-        line-height: 1.2em;
-        padding: 10px;
-        text-decoration: none!important;
-        text-transform: uppercase;
-        transition: all .15s ease-in-out;
-        display: table; 
-        margin-top: 1rem; 
+  a {
+    border: 1px solid $mdc-theme-primary;
+    color: $mdc-theme-primary !important;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    line-height: 1.2em;
+    padding: 10px;
+    text-decoration: none !important;
+    // text-transform: uppercase;
+    transition: all 0.15s ease-in-out;
+    display: table;
+    margin-top: 1rem;
 
-        &:hover{
-            @include mdc-elevation(4);
-            border: 1px solid $mdc-theme-secondary; 
-            color: $mdc-theme-secondary!important; 
-        }
-        
-        .title {
-            display: table-cell; 
-            vertical-align: middle;
-            text-align: center; 
-        }
-
-        .arrow {
-            display: table-cell; 
-            vertical-align: middle;
-        }
-
-        &.previous{
-            .arrow {
-                float: left; 
-                padding-right: 10px; 
-            }
-            .title{
-                padding-right: 10px; 
-            }
-        }
-
-        &.next{
-            .arrow {
-                float: right; 
-                padding-left: 10px; 
-            }
-            .title{
-                padding-left: 10px; 
-            }
-        }
+    &:hover {
+      @include mdc-elevation(4);
+      border: 1px solid $mdc-theme-secondary;
+      color: $mdc-theme-secondary !important;
     }
+
+    .title {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .arrow {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &.previous {
+      .arrow {
+        float: left;
+        padding-right: 10px;
+      }
+      .title {
+        padding-right: 10px;
+      }
+    }
+
+    &.next {
+      .arrow {
+        float: right;
+        padding-left: 10px;
+      }
+      .title {
+        padding-left: 10px;
+      }
+    }
+  }
 }

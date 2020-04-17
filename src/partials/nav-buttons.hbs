@@ -1,39 +1,45 @@
 <script>
-    console.log("page.previous: ", {{{json page.previous}}})
-    console.log("page.next: ", {{{json page.next}}})
+    console.log("page.previous: ", {{{ json page.previous }}})
+    console.log("page.next: ", {{{ json page.next }}})
 </script>
 
 <div class="nav-buttons">
     {{#if page.previous}}
-        <a class="previous" href="
+    <a class="previous" href="
             {{~#if (eq page.previous.urlType 'internal')}}
                 {{{relativize @root.page.url page.previous.url}}}
             {{~else}}
                 {{{page.previous.url}}}
-            {{~/if}}"
-        >
-            <div class="arrow">
-                <i class="material-icons show-more" aria-hidden="true">arrow_back</i>
-            </div>
-             <div class="title">
-                {{page.previous.content}}
-            </div>
-        </a>
+            {{~/if}}">
+        <div class="arrow">
+            <i class="material-icons show-more" aria-hidden="true">arrow_back</i>
+        </div>
+
+        <div class="title">
+            {{#if (eq page.previous.module page.module)}}
+            {{page.previous.module}}:
+            {{/if}}
+            {{page.previous.content}}
+        </div>
+    </a>
     {{/if}}
     {{#if page.next}}
-        <a class="next" href="
+    <a class="next" href="
             {{~#if (eq page.next.urlType 'internal')}}
                 {{{relativize @root.page.url page.next.url}}}
             {{~else}}
                 {{{page.next.url}}}
-            {{~/if}}"
-        >
-            <div class="title">
-                {{page.next.content}}
-            </div>
-            <div class="arrow">
-                <i class="material-icons show-more" aria-hidden="true">arrow_forward</i>
-            </div>
-        </a>
+            {{~/if}}">
+        <div class="title">
+            {{#if (eq page.next.module page.module)}}
+            {{page.next.module}}:
+            {{/if}}
+            {{page.next.content}}
+        </div>
+
+        <div class="arrow">
+            <i class="material-icons show-more" aria-hidden="true">arrow_forward</i>
+        </div>
+    </a>
     {{/if}}
 </div>
