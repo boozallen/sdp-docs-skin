@@ -21,7 +21,7 @@
 }
 
 .tabs.ulist li {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .tabs li + li {
@@ -37,7 +37,7 @@
 .tabset.is-loading .tabs li:first-child::after,
 .tabs li.is-active::after {
   background-color: white;
-  content: "";
+  content: '';
   display: block;
   height: 3px; /* Chrome doesn't always paint the line accurately, so add a little extra */
   position: absolute;
@@ -57,5 +57,5 @@
 }
 
 .tab-pane > :first-child {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
