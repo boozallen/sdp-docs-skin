@@ -50,13 +50,23 @@ async function css() {
 
 // minify JS 
 async function js() {
-    src(`${srcDir}/js/**/*.js`)
+    src(`${srcDir}/js/*.js`)
         .pipe(sourcemaps.init())
         .pipe(concat('site.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(dest(`${destDir}/js`))
+
+    src(`${srcDir}/js/vendor/**/*.js`)
+        .pipe(dest(`${destDir}/js/vendor`))
+        
     return Promise.resolve();
+}
+
+// copy fonts 
+async function fonts(){
+    src(`${srcDir}/fonts/*`).pipe(dest(`${destDir}/fonts`))
+    return Promise.resolve()
 }
 
 async function helpers(){
@@ -110,7 +120,6 @@ function serve() {
         server: {
             baseDir: previewDestDir,
         },
-        files: [ `${previewDestDir}/_/js/vendor/**/*.js` ],
         notify: false
     })
     watch(`${srcDir}/scss/**/*.scss`, css)
@@ -119,7 +128,7 @@ function serve() {
 }
 
 exports.clean = clean; 
-exports.build = series(js, css, img, helpers, handlebars); 
+exports.build = series(js, css, fonts, img, helpers, handlebars); 
 exports.bundle = series(js, css, img, helpers, handlebars, pack);
 exports.preview = series(clean, previewBuild, serve);  
 exports.buildPreviewPages = buildPreviewPages; 

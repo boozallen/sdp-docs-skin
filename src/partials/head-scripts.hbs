@@ -2,22 +2,27 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id={{site.keys.googleAnalytics}}"></script>
     <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','{{site.keys.googleAnalytics}}')</script>
     {{/if}}
-    {{!-- customizations --}}
+
     {{!-- material design --}}
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Fira+Code">
+    {{!-- from https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js --}}
+    <script src="{{{uiRootPath}}}/js/vendor/material/material-components-web.min.js"></script>
 
     {{!-- highlight.js --}}
-    {{!-- <link rel="stylesheet"href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/default.min.css"> --}}
-    <link rel="stylesheet"href="https:////cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/monokai-sublime.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/asciidoc.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/groovy.min.js"></script>
+    {{!-- from https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js --}}
+    <script src="{{{uiRootPath}}}/js/vendor/highlight/highlight.min.js"></script>
+    {{!-- from https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/asciidoc.min.js --}}
+    <script src="{{{uiRootPath}}}/js/vendor/highlight/asciidoc.min.js"></script>
+    {{!-- from https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/groovy.min.js --}}
+    <script src="{{{uiRootPath}}}/js/vendor/highlight/groovy.min.js"></script>
+    {{!-- from https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js --}}
+    <script src="{{{uiRootPath}}}/js/vendor/highlight/javascript.min.js"></script>
+
     {{!-- tippy --}}
-    <script src="https://unpkg.com/popper.js@1"></script>
-    <script src="https://unpkg.com/tippy.js@5"></script>
+    {{!-- from https://unpkg.com/popper.js@1 --}}
+    <script src="{{{uiRootPath}}}/js/vendor/tippy/popper.js"></script>
+    {{!-- from https://unpkg.com/tippy.js@5 --}}
+    <script src="{{{uiRootPath}}}/js/vendor/tippy/tippy.js"></script>
+
     {{!-- clipboardJS --}}
-    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    {{!-- from https://unpkg.com/clipboard@2/dist/clipboard.min.js --}}
+    <script src="{{{uiRootPath}}}/js/vendor/clipboardjs/clipboard.min.js"></script>
