@@ -2,10 +2,8 @@
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <img class="toolbar-logo" src="{{uiRootPath}}/img/jte.svg" viewBox="20 0 80 100"
-        alt="Jenkins Templating Engine Logo" />
-      <span class="mdc-top-app-bar__title">
-        Software Studio
-      </span>
+        alt="Jenkins Templating Engine Logo">
+      <span class="mdc-top-app-bar__title">{{#if site.title}}{{site.title}}{{/if}}</span>
     </section>
 
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">

@@ -39,11 +39,11 @@
   }
 
   function setVersions(versions){
-    return window.localStorage.setItem(versionVar, JSON.stringify(versions))
+    return window.sessionStorage.setItem(versionVar, JSON.stringify(versions))
   }
 
   function getVersions(){
-    return JSON.parse(window.localStorage.getItem(versionVar))
+    return JSON.parse(window.sessionStorage.getItem(versionVar))
   }
 
   function setComponentVersion(component, version){
