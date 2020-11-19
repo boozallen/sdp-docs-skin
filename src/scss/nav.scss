@@ -1,40 +1,44 @@
-
-// customizations 
+// customizations
 // navigation
-@import "./common";
+@import './common';
 
-$nav-width: 18vw; 
-$expand-animation-time: 0.3s; 
+$nav-width: 18vw;
+$expand-animation-time: 0.3s;
 
-//common 
+//common
 div.nav-container {
   box-shadow: none;
 
+  .show-more + span {
+    position: relative;
+    left: 3px;
+  }
+
   .material-icons.show-more {
-    color: black; 
-    font-size: 1.0rem;
-    min-width: 1.0rem;
-    transition: all $expand-animation-time ease-in-out; 
-    
+    color: black;
+    font-size: 1rem;
+    min-width: 1rem;
+    transition: all $expand-animation-time ease-in-out;
+
     &:hover {
-      cursor: pointer; 
+      cursor: pointer;
     }
 
     &.expanded {
       transform: rotate(90deg);
-      transition: all $expand-animation-time ease-in-out; 
+      transition: all $expand-animation-time ease-in-out;
     }
   }
 
   .nav-item {
     font-size: 0.75rem;
-    max-width: 16rem; 
-    color: black; 
+    max-width: 16rem;
+    color: black;
     vertical-align: middle;
-    padding-top: 0.2rem; 
+    padding-top: 0.2rem;
     padding-bottom: 0.2rem;
 
-    display: table; 
+    display: table;
 
     /* Setup word wrapping. overflow-wrap and word-wrap are aliases but some
        browsers support one and not the other. Similarly, webkit only respects
@@ -48,14 +52,14 @@ div.nav-container {
       color: $mdc-theme-secondary;
     }
 
-    &:not(.is-link):hover{
-      cursor: pointer; 
+    &:not(.is-link):hover {
+      cursor: pointer;
     }
 
-    a{
-      text-decoration: none; 
+    a {
+      text-decoration: none;
       color: black;
-      display: table-cell; 
+      display: table-cell;
       vertical-align: middle;
 
       &:hover {
@@ -64,21 +68,19 @@ div.nav-container {
     }
 
     span {
-      display: table-cell; 
+      display: table-cell;
       vertical-align: middle;
     }
 
-
     & .is-current-page {
-      color: $mdc-theme-secondary; 
+      color: $mdc-theme-secondary;
     }
   }
 
   .nav-item .spacer {
-    display: inline-block; 
-    padding-left: 1.2rem; 
+    display: inline-block;
+    padding-left: 1.2rem;
   }
-
 }
 
 .nav-children-panel {
@@ -91,15 +93,15 @@ div.nav-container {
 
 .nav-trees {
   max-width: 100%;
-  margin: 0; 
+  margin: 0;
   margin-right: 2rem;
   padding: 0.2rem 0;
 }
 
-// version select 
+// version select
 .version-box {
-  margin: 0; 
-  float: right; 
+  margin: 0;
+  float: right;
   display: inline-block;
   margin-top: 0.3rem;
 
@@ -132,7 +134,6 @@ div.nav-container {
   // }
 }
 
-
 .select-version {
   display: block;
   font-size: 0.65rem;
@@ -141,7 +142,7 @@ div.nav-container {
   box-sizing: border-box;
   margin: 0;
   border: 1px solid $light-gray;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   -moz-appearance: none;
 }
 
@@ -161,18 +162,18 @@ div.nav-container {
 }
 
 .select-version option {
-	font-weight:normal;
+  font-weight: normal;
 }
 
 .clear {
-  clear: both; 
+  clear: both;
 }
 
 .hide {
-  display: none !important; 
+  display: none !important;
 }
 
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 1025px) {
   div.nav-container {
     min-width: $nav-width;
     aside {
