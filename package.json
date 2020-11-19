@@ -1,14 +1,12 @@
 {
-  "name": "bah-docs-skin",
-  "version": "1.2.1",
+  "name": "starter",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp:bundle": "gulp bundle",
-    "bundle": "./bundle"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Steven Terrana, Bill Brower, Connor Younglund",
+  "author": "Steven Terrana",
   "license": "ISC",
   "devDependencies": {
     "asciidoctor.js": "^1.5.9",
