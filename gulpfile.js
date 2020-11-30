@@ -129,6 +129,6 @@ function serve() {
 
 exports.clean = clean; 
 exports.build = series(js, css, fonts, img, helpers, handlebars); 
-exports.bundle = series(js, css, img, helpers, handlebars, pack);
+exports.bundle = series(js, css, fonts, img, helpers, handlebars, pack);
 exports.preview = series(clean, previewBuild, serve);  
 exports.buildPreviewPages = buildPreviewPages; 
