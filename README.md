@@ -1,4 +1,6 @@
 # SDP Documentation UI Bundle
+# ⚠️ PROJECT RETIRED / UNMAINTAINED
+This repository is no longer actively maintained. 
 
 This repository serves as a UI Bundle for [Antora](https://antora.org/).  
 
